@@ -1,0 +1,105 @@
+.navbar-brand {
+  color: rgb(251, 60, 60);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1em 0em;
+}
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2em;
+  margin-top: 1em;
+}
+.name {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-left: 0.5em;
+}
+.profile .box {
+  width: 5em;
+  height: 5em;
+  border-radius: 5em;
+  background-color: #fff;
+  border: 2px solid white;
+}
+.sidebar {
+  overflow: hidden;
+  background-color: #343a40;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  width: 270px;
+  padding-left: 30px;
+}
+.sidebar .nav-link {
+  font-size: 1.5em;
+  color: white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.nav a {
+  margin: 0.4em 0em;
+  padding-left: 50px;
+}
+.sidebar .nav-link:hover {
+  color: #343a40;
+  background-color: #fff;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 270px;
+}
+.content .col {
+  display: flex;
+  justify-content: center;
+}
+.content .box {
+  border-radius: 10px;
+  background-color: rgb(103, 103, 226);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 13em;
+  height: 9em;
+  border: 2px solid;
+}
+
+.box label {
+  color: #140202;
+  font-size: 20px;
+}
+.content-1 {
+  margin-top: 1em;
+  border-radius: 10px;
+}
+.content-1 .box {
+  display: flex;
+  flex-direction: row;
+}
+
+table thead {
+  font-size: 20px;
+}
+
+.bi-trash {
+  font-size: 20px;
+  color: red;
+}
+.bi-pen {
+  color: greenyellow;
+}
+input {
+  border-radius: 10px;
+  width: 15pc;
+  height: 2.5pc;
+}
+.btn {
+  padding: 0.3pc 1pc;
+  margin: 1pc;
+}
