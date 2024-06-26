@@ -1,5 +1,14 @@
+.sidebar {
+  overflow: hidden;
+  background: linear-gradient(45deg, #343a40, #6c757d);
+  color: white;
+  height: 100vh;
+  position: fixed;
+  width: 270px;
+  padding-left: 30px;
+}
 .navbar-brand {
-  color: rgb(251, 60, 60);
+  color: #ff4d4d;
   font-size: 1.5rem;
   font-weight: 600;
   margin: 1em 0em;
@@ -20,25 +29,14 @@
   width: 5em;
   height: 5em;
   border-radius: 5em;
-  background-color: #fff;
+  background-color: #ff4d4d;
   border: 2px solid white;
 }
-.sidebar {
-  overflow: hidden;
-  background-color: #343a40;
-  color: white;
-  height: 100vh;
-  position: fixed;
-  width: 270px;
-  padding-left: 30px;
-}
 .sidebar .nav-link {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: white;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-}
-.nav a {
   margin: 0.4em 0em;
   padding-left: 50px;
 }
@@ -48,19 +46,20 @@
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
-
 .content {
   flex-grow: 1;
   padding: 20px;
   margin-left: 270px;
+  background-color: #f8f9fa;
 }
 .content .col {
   display: flex;
   justify-content: center;
 }
 .content .box {
+  overflow-x: hidden;
   border-radius: 10px;
-  background-color: rgb(103, 103, 226);
+  background-color: #ff914d;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -68,25 +67,26 @@
   width: 13em;
   height: 9em;
   border: 2px solid;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .box label {
-  color: #140202;
+  color: #fff;
   font-size: 20px;
 }
 .content-1 {
+  overflow-y: auto;
   margin-top: 1em;
   border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.content-1 .box {
-  display: flex;
-  flex-direction: row;
-}
-
 table thead {
   font-size: 20px;
+  background-color: #ff914d;
+  color: white;
 }
-
 .bi-trash {
   font-size: 20px;
   color: red;
@@ -102,4 +102,11 @@ input {
 .btn {
   padding: 0.3pc 1pc;
   margin: 1pc;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color: #e64444;
 }

@@ -1,0 +1,16 @@
+.container {
+  height: 450px;
+  overflow-y: auto;
+}
+
+table {
+  border-bottom: 2px solid;
+}
+thead {
+  font-weight: 600;
+}
+h3 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-left: 2em;
+}

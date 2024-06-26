@@ -3,12 +3,12 @@
     <a href="#" class="navbar-brand">Admin Dash board</a>
     <div class="profile">
       <div class="box"></div>
-      <div class="name">G vamsi</div>
+      <div class="name">G Vamsi</div>
     </div>
     <nav class="nav flex-column">
-      <a class="nav-link" routerLink="">Product List</a>
-      <a class="nav-link" routerLink="">Orders</a>
-      <a class="nav-link" routerLink="">admin list</a>
+      <a class="nav-link" routerLink="/products">Product List</a>
+      <a class="nav-link" routerLink="/orders">Orders</a>
+      <a class="nav-link" routerLink="">Admin List</a>
       <a class="nav-link" routerLink="">Users List</a>
       <a class="nav-link" routerLink="">Log Out</a>
     </nav>
@@ -18,73 +18,25 @@
       <div class="col">
         <div class="box">
           <h2>50</h2>
-          <label for="orders">total products</label>
+          <label for="orders">Total Products</label>
         </div>
       </div>
       <div class="col">
-        <div class="box">
+        <div class="box" style="background-color: #28a745">
           <h2>50</h2>
-          <label for="orders">orders</label>
+          <label for="orders">Orders</label>
         </div>
       </div>
       <div class="col">
-        <div class="box">
+        <div class="box" style="background-color: #17a2b8">
           <h2>50</h2>
-          <label for="orders">delivered</label>
+          <label for="orders">Delivered</label>
         </div>
       </div>
     </div>
     <div class="content-1">
-      <div class="row">
-        <div class="col-3">
-          <h2>products List</h2>
-        </div>
-        <div class="col-5"></div>
-        <div class="col-4">
-          <input type="search" />
-          <button class="btn btn-success">search</button>
-        </div>
-      </div>
-      <div class="card">
-        <table class="table table-dark">
-          <thead>
-            <tr class="table-success">
-              <td>p-id</td>
-              <td>product name</td>
-              <td>price</td>
-              <td>catageroy</td>
-              <td>edit</td>
-              <td>delete</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>ponds powder</td>
-              <td>200/-</td>
-              <td>women</td>
-              <td><i class="bi bi-pen"></i></td>
-              <td><i class="bi bi-trash"></i></td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>ponds powder</td>
-              <td>200/-</td>
-              <td>women</td>
-              <td><i class="bi bi-pen"></i></td>
-              <td><i class="bi bi-trash"></i></td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>ponds powder</td>
-              <td>200/-</td>
-              <td>women</td>
-              <td><i class="bi bi-pen"></i></td>
-              <td><i class="bi bi-trash"></i></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <router-outlet></router-outlet>
+      <!-- <app-products></app-products> -->
     </div>
   </div>
 </div>
