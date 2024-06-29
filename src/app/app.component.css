@@ -64,7 +64,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 13em;
+  width: 15em;
   height: 9em;
   border: 2px solid;
   color: #fff;
@@ -109,4 +109,8 @@ input {
 }
 .btn:hover {
   background-color: #e64444;
+}
+
+.content-1 {
+  overflow-x: hidden;
 }

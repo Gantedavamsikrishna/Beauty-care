@@ -1,0 +1,120 @@
+<div class="container">
+  <div class="box">
+    <div class="header">Admin Registration</div>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            id="id"
+            formControlName="id"
+            placeholder="Enter ID"
+          />
+          <div
+            *ngIf="
+              productForm.get('id')?.invalid &&
+              (productForm.get('id')?.dirty || productForm.get('id')?.touched)
+            "
+            class="text-danger"
+          >
+            ID is required
+          </div>
+
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            formControlName="name"
+            placeholder="Enter your name"
+          />
+          <div
+            *ngIf="
+              productForm.get('name')?.invalid &&
+              (productForm.get('name')?.dirty ||
+                productForm.get('name')?.touched)
+            "
+            class="text-danger"
+          >
+            name is required
+          </div>
+
+          <input
+            type="email"
+            class="form-control"
+            id="mail"
+            formControlName="mail"
+            placeholder="Enter your email"
+          />
+          <div
+            *ngIf="
+              productForm.get('mail')?.invalid &&
+              (productForm.get('mail')?.dirty ||
+                productForm.get('mail')?.touched)
+            "
+            class="text-danger"
+          >
+            <div *ngIf="productForm.get('mail')?.errors?.['required']">
+              Email is required
+            </div>
+            <div *ngIf="productForm.get('mail')?.errors?.['email']">
+              Invalid email format
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            formControlName="password"
+            placeholder="Enter password"
+          />
+          <div
+            *ngIf="
+              productForm.get('password')?.invalid &&
+              (productForm.get('password')?.dirty ||
+                productForm.get('password')?.touched)
+            "
+            class="text-danger"
+          >
+            <div *ngIf="productForm.get('password')?.errors?.['required']">
+              Password is required
+            </div>
+            <div *ngIf="productForm.get('password')?.errors?.['minlength']">
+              Password must be at least 6 characters long
+            </div>
+          </div>
+
+          <input
+            type="text"
+            class="form-control"
+            id="phnumber"
+            formControlName="phnumber"
+            placeholder="Enter phone number"
+          />
+          <div
+            *ngIf="
+              productForm.get('phnumber')?.invalid &&
+              (productForm.get('phnumber')?.dirty ||
+                productForm.get('phnumber')?.touched)
+            "
+            class="text-danger"
+          >
+            <div *ngIf="productForm.get('phnumber')?.errors?.['required']">
+              Phone number is required
+            </div>
+            <div *ngIf="productForm.get('phnumber')?.errors?.['pattern']">
+              Phone number must be 10 digits
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary rounded form-control">
+        Register
+      </button>
+    </form>
+  </div>
+</div>
