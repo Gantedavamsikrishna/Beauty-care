@@ -1,0 +1,64 @@
+<div class="container-fluide" *ngIf="islogin">
+  <div class="box">
+    <div class="header text-center">Admin Login</div>
+    <form (ngSubmit)="onsubmit()">
+      <input
+        type="text"
+        placeholder="username"
+        [(ngModel)]="logindata.mail"
+        name="email"
+      />
+      <input
+        type="password"
+        placeholder="password"
+        [(ngModel)]="logindata.password"
+        name="password"
+      />
+      <div class="mdg text-center text-light">{{ errmsg }}</div>
+      <div class="forgot"><a routerLink="#">forgot password ?</a></div>
+      <button class="btn btn-success" routerLink="/dashboard">Login</button>
+    </form>
+  </div>
+</div>
+
+<div class="d-flex" *ngIf="isdashboard">
+  <div class="sidebar d-flex flex-column">
+    <a href="#" class="navbar-brand">Admin Dash board</a>
+    <div class="profile">
+      <div class="box"></div>
+      <div class="name">G Vamsi</div>
+    </div>
+    <nav class="nav flex-column">
+      <a class="nav-link" routerLink="products">Product List</a>
+      <a class="nav-link" routerLink="orders">Orders</a>
+      <a class="nav-link" routerLink="adminl">Admin List</a>
+      <a class="nav-link" routerLink="">Users List</a>
+      <a class="nav-link" routerLink="login">Log Out</a>
+    </nav>
+  </div>
+  <div class="content">
+    <div class="row">
+      <div class="col">
+        <div class="box">
+          <h2>50</h2>
+          <label for="orders">Total Products</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="box" style="background-color: #28a745">
+          <h2>50</h2>
+          <label for="orders">Orders</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="box" style="background-color: #17a2b8">
+          <h2>50</h2>
+          <label for="orders">Delivered</label>
+        </div>
+      </div>
+    </div>
+    <div class="content-1">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

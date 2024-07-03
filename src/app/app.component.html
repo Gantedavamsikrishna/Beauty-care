@@ -1,41 +1,62 @@
-<div class="d-flex">
-  <div class="sidebar d-flex flex-column">
-    <a href="#" class="navbar-brand">Admin Dash board</a>
-    <div class="profile">
-      <div class="box"></div>
-      <div class="name">G Vamsi</div>
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+  rel="stylesheet"
+/>
+
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">
+      <h3>My <span>Profile</span>.</h3>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" fragment="home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" fragment="about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" fragment="skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" fragment="projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/landing">login</a>
+        </li>
+      </ul>
     </div>
-    <nav class="nav flex-column">
-      <a class="nav-link" routerLink="/products">Product List</a>
-      <a class="nav-link" routerLink="/orders">Orders</a>
-      <a class="nav-link" routerLink="/adminl">Admin List</a>
-      <a class="nav-link" routerLink="">Users List</a>
-      <a class="nav-link" routerLink="">Log Out</a>
-    </nav>
   </div>
-  <div class="content">
+</nav>
+<div class="container-1">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col">
-        <div class="box">
-          <h2>50</h2>
-          <label for="orders">Total Products</label>
+      <div class="col-sm-12 col-6">
+        <div class="text">
+          <h3>
+            Naturally Radiant: <br />
+            transform your <br />
+            skin with organic <br />
+            care
+          </h3>
         </div>
       </div>
-      <div class="col">
-        <div class="box" style="background-color: #28a745">
-          <h2>50</h2>
-          <label for="orders">Orders</label>
-        </div>
+
+      <div class="col-sm-12 col-6">
+        <div class="box"></div>
       </div>
-      <div class="col">
-        <div class="box" style="background-color: #17a2b8">
-          <h2>50</h2>
-          <label for="orders">Delivered</label>
-        </div>
-      </div>
-    </div>
-    <div class="content-1">
-      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

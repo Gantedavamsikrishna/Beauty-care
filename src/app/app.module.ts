@@ -8,6 +8,10 @@ import { OrdersComponent } from './orders/orders.component';
 import { AdminRegComponent } from './admin-reg/admin-reg.component';
 import { AdminListComponent } from './admin-list/admin-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddproductComponent } from './addproduct/addproduct.component';
+
+import { AdminService } from './admin.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     OrdersComponent,
     AdminRegComponent,
     AdminListComponent,
+    AddproductComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +30,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [AdminService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

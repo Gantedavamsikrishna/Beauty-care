@@ -1,0 +1,55 @@
+<div class="container">
+  <form [formGroup]="productform" (ngSubmit)="onsubmit()">
+    <header class="text-center">Add Product Details</header>
+    <div class="row">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control m-3"
+          formControlName="productid"
+          placeholder="enter product id"
+        />
+
+        <select
+          name="catageroy"
+          class="form-control m-3"
+          formControlName="catageroy"
+        >
+          <option value="">--please select catageroy--</option>
+          <option value="men">men</option>
+          <option value="women">women</option>
+        </select>
+        <input
+          type="text"
+          class="form-control"
+          id="price"
+          formControlName="price"
+          placeholder="enter price"
+        />
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control m-3"
+          formControlName="pname"
+          placeholder="enter product name "
+        />
+
+        <input
+          type="file"
+          class="form-control m-3"
+          placeholder="please add picture of product"
+        />
+        <textarea
+          name="description"
+          id=""
+          placeholder="write about product"
+          formControlName="details"
+          class="form-control m-3"
+        ></textarea>
+      </div>
+    </div>
+    <button type="reset" class="btn btn-danger">Clear Details</button>
+    <button type="submit" class="btn btn-primary">Add Product</button>
+  </form>
+</div>
