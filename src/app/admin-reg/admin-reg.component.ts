@@ -44,7 +44,7 @@ export class AdminRegComponent implements OnInit {
         (response) => {
           console.log('Admin created successfully', response);
           this.productForm.reset();
-          this.router.navigate(['/adminl']);
+          this.router.navigate(['dashboard/adminl']);
         },
         (error) => {
           console.error('Error creating admin', error);

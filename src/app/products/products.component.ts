@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../admin.service';
 import { retry } from 'rxjs';
+import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-products',
@@ -8,12 +10,56 @@ import { retry } from 'rxjs';
   styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
+  isList: boolean = true;
+  isreg: boolean = false;
   products: any[] = [];
   deletemsg: String = '';
-  constructor(private service: AdminService) {}
+  productform: FormGroup;
+
+  constructor(
+    private service: AdminService,
+    private router: Router,
+    private fb: FormBuilder
+  ) {
+    this.productform = this.fb.group({
+      id: ['', Validators.required],
+      productName: ['', Validators.required],
+      price: ['', Validators.required],
+      catageroy: ['', Validators.required],
+      details: ['', Validators.required],
+    });
+  }
+
   ngOnInit(): void {
+    this.productform = this.fb.group({
+      productid: ['', Validators.required],
+      pname: ['', Validators.required],
+      price: ['', Validators.required],
+      catageroy: ['', Validators.required],
+      details: ['', Validators.required],
+    });
     this.getallprdata(this.products);
   }
+  onsubmit() {
+    if (this.productform.valid) {
+      const formData = this.productform.value;
+      this.service.createprdata(formData).subscribe(
+        (response) => {
+          console.log('product added  successfully', response);
+          this.productform.reset();
+          this.getallprdata(this.products);
+          this.isList = true;
+          this.isreg = false;
+        },
+        (error) => {
+          console.error('Error adding product', error);
+        }
+      );
+    } else {
+      console.log('Form is invalid');
+    }
+  }
+
   getallprdata(data: any[]) {
     this.service.getallprdata(data).subscribe(
       (res) => {
@@ -34,5 +80,9 @@ export class ProductsComponent implements OnInit {
       this.deletemsg = res;
       this.getallprdata(this.products);
     });
+  }
+  navigateToAddproduct() {
+    this.isList = false;
+    this.isreg = true;
   }
 }

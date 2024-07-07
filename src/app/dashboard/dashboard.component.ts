@@ -8,6 +8,15 @@ import { AdminService } from '../admin.service';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent {
+  islogout() {
+    if (confirm('Are you sure you want to logout form dashboard?')) {
+      this.islogin = true;
+      this.isdashboard = false;
+    } else {
+      this.islogin = false;
+      this.isdashboard = true;
+    }
+  }
   errmsg: string = '';
   islogin: boolean = true;
   isdashboard: boolean = false;

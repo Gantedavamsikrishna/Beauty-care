@@ -41,6 +41,7 @@
   padding-left: 50px;
 }
 .sidebar .nav-link:hover {
+  cursor: pointer;
   color: #343a40;
   background-color: #fff;
   border-top-left-radius: 20px;

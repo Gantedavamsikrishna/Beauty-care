@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AdminService {
-  private adminurl = 'http://localhost:2026/admin';
+  private adminurl = 'https://adminlogin-latest.onrender.com/admin';
   private producturl = 'http://localhost:2024/product';
 
   constructor(private http: HttpClient) {}
@@ -23,11 +23,13 @@ export class AdminService {
   createprdata(add: any): Observable<any> {
     return this.http.post(`${this.producturl}/save`, add);
   }
-  updatedata(edit: any): Observable<any> {
-    return this.http.put(`${this.adminurl}/update/{id}`, edit);
+  updatedata(id: any): Observable<any> {
+    return this.http.put(`${this.adminurl}/update/${id}`, id);
   }
-  deletedata(id: any): Observable<any> {
-    return this.http.delete(`${this.adminurl}/delete/{id}`, id);
+  deleteadmin(id: any): Observable<any> {
+    return this.http.delete(`${this.adminurl}/delete/${id}`, {
+      responseType: 'text',
+    });
   }
   deletepr(id: any): Observable<any> {
     return this.http.delete(`${this.producturl}/delete/${id}`, {

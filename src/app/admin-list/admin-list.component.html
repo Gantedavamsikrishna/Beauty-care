@@ -1,43 +1,172 @@
-<div class="row align-items-center mb-4">
-  <div class="col-md-4">
-    <h2>Product List</h2>
-  </div>
-  <div class="col-md-4 text-center d-flex">
-    <div class="btn btn-primary" routerLink="/adminreg">Add Admin</div>
-  </div>
-  <div class="col-md-4 d-flex justify-content-end">
-    <input type="search" class="form-control me-2" placeholder="Search" />
-    <button class="btn btn-success" (click)="search()">Search</button>
+<div class="container-1" *ngIf="isreg">
+  <div class="box">
+    <div class="header">Admin Registration</div>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            id="id"
+            formControlName="id"
+            placeholder="Enter ID"
+          />
+          <div
+            *ngIf="
+              productForm.get('id')?.invalid &&
+              (productForm.get('id')?.dirty || productForm.get('id')?.touched)
+            "
+            class="text-danger"
+          >
+            ID is required
+          </div>
+
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            formControlName="name"
+            placeholder="Enter your name"
+          />
+          <div
+            *ngIf="
+              productForm.get('name')?.invalid &&
+              (productForm.get('name')?.dirty ||
+                productForm.get('name')?.touched)
+            "
+            class="text-danger"
+          >
+            name is required
+          </div>
+
+          <input
+            type="email"
+            class="form-control"
+            id="mail"
+            formControlName="mail"
+            placeholder="Enter your email"
+          />
+          <div
+            *ngIf="
+              productForm.get('mail')?.invalid &&
+              (productForm.get('mail')?.dirty ||
+                productForm.get('mail')?.touched)
+            "
+            class="text-danger"
+          >
+            <div *ngIf="productForm.get('mail')?.errors?.['required']">
+              Email is required
+            </div>
+            <div *ngIf="productForm.get('mail')?.errors?.['email']">
+              Invalid email format
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            formControlName="password"
+            placeholder="Enter password"
+          />
+          <div
+            *ngIf="
+              productForm.get('password')?.invalid &&
+              (productForm.get('password')?.dirty ||
+                productForm.get('password')?.touched)
+            "
+            class="text-danger"
+          >
+            <div *ngIf="productForm.get('password')?.errors?.['required']">
+              Password is required
+            </div>
+            <div *ngIf="productForm.get('password')?.errors?.['minlength']">
+              Password must be at least 6 characters long
+            </div>
+          </div>
+
+          <input
+            type="text"
+            class="form-control"
+            id="phnumber"
+            formControlName="phnumber"
+            placeholder="Enter phone number"
+          />
+          <div
+            *ngIf="
+              productForm.get('phnumber')?.invalid &&
+              (productForm.get('phnumber')?.dirty ||
+                productForm.get('phnumber')?.touched)
+            "
+            class="text-danger"
+          >
+            <div *ngIf="productForm.get('phnumber')?.errors?.['required']">
+              Phone number is required
+            </div>
+            <div *ngIf="productForm.get('phnumber')?.errors?.['pattern']">
+              Phone number must be 10 digits
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary rounded form-control">
+        Register
+      </button>
+    </form>
   </div>
 </div>
 
-<div class="container">
-  <table class="table table-striped table-hover">
-    <thead class="sticky-top">
-      <tr class="table-success">
-        <td>Admin_id</td>
-        <td>Full Name</td>
-        <td>UserName</td>
-        <td>Password</td>
-        <td>Phone Number</td>
-        <td>Edit</td>
-        <td>Delete</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let admin of readdata">
-        <td>{{ admin.id }}</td>
-        <td>{{ admin.name }}</td>
-        <td>{{ admin.mail }}</td>
-        <td>{{ admin.password }}</td>
-        <td>{{ admin.phnumber }}</td>
-        <td>
-          <button class="btn btn-warning">Edit</button>
-        </td>
-        <td>
-          <button class="btn btn-danger">Delete</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<div class="list" *ngIf="isList">
+  <div class="row align-items-center mb-4">
+    <div class="col-md-4">
+      <h2>Product List</h2>
+    </div>
+    <div class="col-md-4 text-center d-flex">
+      <div class="btn btn-primary" (click)="navigateToAdminReg()">
+        add Admin
+      </div>
+    </div>
+    <div class="col-md-4 d-flex justify-content-end">
+      <input type="search" class="form-control me-2" placeholder="Search" />
+      <button class="btn btn-success" (click)="search()">Search</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <table class="table table-striped table-hover">
+      <thead class="sticky-top">
+        <tr class="table-success">
+          <td>Admin_id</td>
+          <td>Full Name</td>
+          <td>UserName</td>
+          <td>Password</td>
+          <td>Phone Number</td>
+          <td>Edit</td>
+          <td>Delete</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let admin of readdata">
+          <td>{{ admin.id }}</td>
+          <td>{{ admin.name }}</td>
+          <td>{{ admin.mail }}</td>
+          <td>{{ admin.password }}</td>
+          <td>{{ admin.phnumber }}</td>
+          <td>
+            <button class="btn btn-warning" (click)="edit(admin.id)">
+              Edit
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-danger" (click)="delete(admin.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

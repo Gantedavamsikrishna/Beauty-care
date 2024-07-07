@@ -1,0 +1,67 @@
+nav {
+  background: rgb(120, 120, 123);
+  height: 60px;
+}
+.navbar-light {
+  background-color: aliceblue !;
+}
+.container-1 {
+  background-image: url("/assets/landingbg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 48pc;
+  height: 100vh;
+}
+.container-fluid {
+  margin-top: 3pc;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  background-color: rgba(108, 158, 251, 0.5);
+}
+.text h3 {
+  margin-top: 5pc;
+  font-size: 3pc;
+  font-weight: 600;
+  margin-left: 5pc;
+}
+
+.box {
+  background-color: black;
+  border: 2px solid red;
+  display: block;
+  width: 20pc;
+  border-radius: 10px;
+  height: 25pc;
+}
+
+.borde1 {
+  width: 20pc;
+  height: 25pc;
+  position: relative;
+  border: 4px solid red;
+  border-radius: 10px;
+  top: 30px;
+  right: 40px;
+}
+
+@media (max-width: 576px) {
+  .text h3 {
+    margin-left: 0px;
+    font-size: 30px;
+  }
+  .box {
+    margin-left: 25px;
+    width: 17pc;
+    border-radius: 10px;
+    height: 20pc;
+  }
+  .borde1 {
+    width: 17pc;
+    height: 20pc;
+    position: relative;
+    top: 25px;
+    right: 30px;
+  }
+}

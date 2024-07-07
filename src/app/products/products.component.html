@@ -1,44 +1,106 @@
-<div class="row align-items-center mb-4">
-  <div class="col-md-4">
-    <h2>Product List</h2>
-  </div>
-  <div class="col-md-4 text-center d-flex"></div>
-  <div class="col-md-4 d-flex justify-content-end">
-    <input type="search" class="form-control me-2" placeholder="Search" />
-    <button class="btn btn-success">Search</button>
-  </div>
+<div class="container-1" *ngIf="isreg">
+  <form [formGroup]="productform" (ngSubmit)="onsubmit()">
+    <header class="text-center">Add Product Details</header>
+    <div class="row">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control m-3"
+          formControlName="productid"
+          placeholder="enter product id"
+        />
+
+        <select
+          name="catageroy"
+          class="form-control m-3"
+          formControlName="catageroy"
+        >
+          <option value="">--please select catageroy--</option>
+          <option value="men">men</option>
+          <option value="women">women</option>
+        </select>
+        <input
+          type="text"
+          class="form-control"
+          id="price"
+          formControlName="price"
+          placeholder="enter price"
+        />
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control m-3"
+          formControlName="pname"
+          placeholder="enter product name "
+        />
+
+        <input
+          type="file"
+          class="form-control m-3"
+          placeholder="please add picture of product"
+        />
+        <textarea
+          name="description"
+          id=""
+          placeholder="write about product"
+          formControlName="details"
+          class="form-control m-3"
+        ></textarea>
+      </div>
+    </div>
+    <button type="reset" class="btn btn-danger">Clear Details</button>
+    <button type="submit" class="btn btn-primary">Add Product</button>
+  </form>
 </div>
 
-<div class="container">
-  <table class="table table-striped table-hover">
-    <thead class="sticky-top">
-      <tr class="table-success">
-        <td>P_id</td>
-        <td>Product name</td>
-        <td>Categeroy</td>
-        <td>Price</td>
-        <td>Product Details</td>
-        <td>Edit</td>
-        <td>Delete</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let p of products">
-        <td>{{ p.productid }}</td>
-        <td>{{ p.pname }}</td>
-        <td>{{ p.catageroy }}</td>
-        <td>{{ p.price }}</td>
-        <td>{{ p.details }}</td>
-        <td>
-          <button class="btn btn-warning">Edit</button>
-        </td>
+<div class="list" *ngIf="isList">
+  <div class="row align-items-center mb-4">
+    <div class="col-md-4">
+      <h2>Product List</h2>
+    </div>
+    <div class="col-md-4 text-center d-flex">
+      <div class="btn btn-primary" (click)="navigateToAddproduct()">
+        add product
+      </div>
+    </div>
+    <div class="col-md-4 d-flex justify-content-end">
+      <input type="search" class="form-control me-2" placeholder="Search" />
+      <button class="btn btn-success">Search</button>
+    </div>
+  </div>
 
-        <td>
-          <button class="btn btn-danger" (click)="delete(p.productid)">
-            Delete
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="container">
+    <table class="table table-striped table-hover">
+      <thead class="sticky-top">
+        <tr class="table-success">
+          <td>P_id</td>
+          <td>Product name</td>
+          <td>Categeroy</td>
+          <td>Price</td>
+          <td>Product Details</td>
+          <td>Edit</td>
+          <td>Delete</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of products">
+          <td>{{ p.productid }}</td>
+          <td>{{ p.pname }}</td>
+          <td>{{ p.catageroy }}</td>
+          <td>{{ p.price }}</td>
+          <td>{{ p.details }}</td>
+          <td>
+            <button class="btn btn-warning">Edit</button>
+          </td>
+
+          <td>
+            <button class="btn btn-danger" (click)="delete(p.productid)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

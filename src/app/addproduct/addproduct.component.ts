@@ -41,7 +41,7 @@ export class AddproductComponent implements OnInit {
         (response) => {
           console.log('product added  successfully', response);
           this.productform.reset();
-          this.router.navigate(['/products']);
+          this.router.navigate(['dashboard/products']);
         },
         (error) => {
           console.error('Error adding product', error);

@@ -9,8 +9,41 @@ table {
 thead {
   font-weight: 600;
 }
-h3 {
+
+.container-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-1 h3 {
   font-size: 30px;
   font-weight: 600;
   margin-left: 2em;
+}
+
+.container-1 .header {
+  font-size: 30px;
+  font-weight: 600;
+  margin-left: 10em;
+  margin-bottom: 1em;
+}
+
+.container-1 .box {
+  margin-top: 1pc;
+  padding: 1pc;
+  background: #fff;
+
+  width: 60pc;
+  height: 25pc;
+  border-radius: 10px;
+}
+
+.container-1 button {
+  float: right;
+  margin-top: 2em;
+  width: 20pc;
+}
+.container-1 input {
+  margin-top: 2em;
+  border-bottom: 2px solid blue;
 }
