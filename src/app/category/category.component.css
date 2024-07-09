@@ -1,0 +1,51 @@
+.container {
+  height: 90vh;
+  overflow-x: hidden;
+  font-family: "Playfair Display", serif;
+}
+#beauty {
+  padding-right: 0px;
+}
+.collect {
+  height: 465px;
+  width: 400px;
+}
+
+.crm {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.showbttl {
+  width: 240px;
+  height: 250px;
+  border-radius: 10px;
+}
+.pwdbttl {
+  width: 190px;
+  height: 200px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.cutbttl {
+  width: 310px;
+  height: 200px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.yellow {
+  height: 150px;
+
+  margin-bottom: 10px;
+}
+
+.bttl {
+  height: 300px;
+  width: 275px;
+}
+.col h2 {
+  margin-bottom: 0.7em;
+  font-size: 4em;
+}

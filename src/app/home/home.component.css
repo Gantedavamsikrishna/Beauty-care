@@ -8,42 +8,56 @@ nav {
 .container-1 {
   background-image: url("/assets/landingbg.jpg");
   background-repeat: no-repeat;
+  font-family: "Ubuntu", sans-serif;
   background-position: center;
-  background-attachment: fixed;
-  background-size: 48pc;
-  height: 100vh;
+  width: 100%;
+  background-size: 60pc;
+  height: 90vh;
 }
 .container-fluid {
-  margin-top: 3pc;
+  margin-top: 3.5em;
   width: 100%;
   height: 100%;
   padding: 2em;
-  background-color: rgba(108, 158, 251, 0.5);
+  backdrop-filter: blur(3px);
+
+  background-color: rgba(89, 123, 190, 0.5);
+  border-radius: 1pc;
 }
 .text h3 {
   margin-top: 5pc;
   font-size: 3pc;
   font-weight: 600;
-  margin-left: 5pc;
+  margin-left: 4pc;
 }
 
 .box {
+  margin-top: 8em;
   background-color: black;
-  border: 2px solid red;
   display: block;
-  width: 20pc;
-  border-radius: 10px;
-  height: 25pc;
+  width: 30pc;
+  border-radius: 1.5pc;
+  height: 35pc;
+  margin-left: 10em;
 }
 
 .borde1 {
-  width: 20pc;
-  height: 25pc;
+  width: 30pc;
+  height: 35pc;
   position: relative;
-  border: 4px solid red;
-  border-radius: 10px;
-  top: 30px;
+  border: 3px solid #ffff;
+  border-radius: 1.5pc;
+  top: 40px;
   right: 40px;
+}
+p {
+  font-size: 20px;
+  margin-left: 3em;
+}
+.btn {
+  margin-left: 15em;
+  border-radius: 27px;
+  padding: 13px 45px;
 }
 
 @media (max-width: 576px) {

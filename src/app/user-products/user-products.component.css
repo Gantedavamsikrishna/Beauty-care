@@ -1,0 +1,46 @@
+#c-1 {
+  margin-top: 3pc;
+}
+#c-1 .card {
+  width: 20pc;
+  height: 15pc;
+}
+
+#c-1 .card .text {
+  font-size: 18px;
+  font-weight: 600;
+}
+#c-2 {
+  margin-top: 5pc;
+  margin-bottom: 5pc;
+}
+
+#c-2 .card {
+  width: 20pc;
+  height: 31pc;
+  border: 3px solid burlywood;
+  overflow: hidden;
+}
+#c-2 .row {
+  margin-bottom: 2pc;
+}
+#c-2 .card i {
+  z-index: 1;
+  color: #ffff;
+  position: relative;
+  bottom: 30pc;
+  left: 17pc;
+  font-size: 2rem;
+}
+#c-2 .card img {
+  width: 20pc;
+  height: auto;
+}
+.details {
+  font-size: 20px;
+  font-weight: 600;
+}
+.details .cost {
+  margin-top: -18px;
+  margin-bottom: 10px;
+}

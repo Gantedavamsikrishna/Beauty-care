@@ -1,29 +1,152 @@
-<div class="row align-items-center mb-4">
-  <div class="col-md-4">
-    <h2>Product List</h2>
-  </div>
-  <div class="col-md-4 text-center">
-    <!-- Empty space in the middle -->
-  </div>
-  <div class="col-md-4 d-flex justify-content-end">
-    <input type="search" class="form-control me-2" placeholder="Search" />
-    <button class="btn btn-success">Search</button>
+<div class="container-1" *ngIf="isreg">
+  <div class="box">
+    <div class="header">Admin Registration</div>
+    <form [formGroup]="orderform" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            id="id"
+            formControlName="orderid"
+            placeholder="Enter ID"
+          />
+          <div
+            *ngIf="
+              orderform.get('orderid')?.invalid &&
+              (orderform.get('orderid')?.dirty ||
+                orderform.get('orderid')?.touched)
+            "
+            class="text-danger"
+          >
+            ID is required
+          </div>
+
+          <input
+            type="number"
+            class="form-control"
+            id="name"
+            formControlName="quantity"
+            placeholder="add quantity"
+          />
+          <div
+            *ngIf="
+              orderform.get('quantity')?.invalid &&
+              (orderform.get('quantity')?.dirty ||
+                orderform.get('quantity')?.touched)
+            "
+            class="text-danger"
+          >
+            name is required
+          </div>
+
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            formControlName="pincode"
+            placeholder="Enter your code"
+          />
+          <div
+            *ngIf="
+              orderform.get('pincode')?.invalid &&
+              (orderform.get('pincode')?.dirty ||
+                orderform.get('pincode')?.touched)
+            "
+            class="text-danger"
+          >
+            name is required
+          </div>
+
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            formControlName="address"
+            placeholder="Enter your name"
+          />
+          <div
+            *ngIf="
+              orderform.get('address')?.invalid &&
+              (orderform.get('address')?.dirty ||
+                orderform.get('address')?.touched)
+            "
+            class="text-danger"
+          >
+            name is required
+          </div>
+
+          <input
+            type="text"
+            class="form-control"
+            id="phnumber"
+            formControlName="phnumber"
+            placeholder="Enter phone number"
+          />
+          <div
+            *ngIf="
+              orderform.get('phnumber')?.invalid &&
+              (orderform.get('phnumber')?.dirty ||
+                orderform.get('phnumber')?.touched)
+            "
+            class="text-danger"
+          >
+            <div *ngIf="orderform.get('phnumber')?.errors?.['required']">
+              Phone number is required
+            </div>
+            <div *ngIf="orderform.get('phnumber')?.errors?.['pattern']">
+              Phone number must be 10 digits
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary rounded form-control">
+        Register
+      </button>
+    </form>
   </div>
 </div>
-<div class="container">
-  <table class="table table-striped table-hover">
-    <thead class="sticky-top">
-      <tr class="table-success">
-        <td>p_id</td>
-        <td>product name</td>
-        <td>name</td>
-        <td>address</td>
-        <td>payment type</td>
-        <td>date</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let o of orders"></tr>
-    </tbody>
-  </table>
+
+<div class="list" *ngIf="isList">
+  <div class="row align-items-center mb-4">
+    <div class="col-md-4">
+      <h2>Product List</h2>
+    </div>
+    <div class="col-md-4 text-center d-flex">
+      <div class="btn btn-primary" (click)="navigateToAdminReg()">
+        add Admin
+      </div>
+    </div>
+    <div class="col-md-4 d-flex justify-content-end">
+      <input type="search" class="form-control me-2" placeholder="Search" />
+      <button class="btn btn-success">Search</button>
+    </div>
+  </div>
+  <div class="container">
+    <table class="table table-striped table-hover">
+      <thead class="sticky-top">
+        <tr class="table-success">
+          <td>id</td>
+          <td>productid</td>
+          <td>pname</td>
+          <td>quantity</td>
+          <td>pincode</td>
+          <td>address</td>
+          <td>phnumber</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.orderid }}</td>
+          <td>{{ order.productId }}</td>
+          <td>{{ order.pname }}</td>
+          <td>{{ order.quantity }}</td>
+          <td>{{ order.pincode }}</td>
+          <td>{{ order.address }}</td>
+          <td>{{ order.phnumber }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

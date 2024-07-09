@@ -14,6 +14,14 @@ import { AdminService } from './admin.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AboutComponent } from './about/about.component';
+import { CardsComponent } from './cards/cards.component';
+import { TreatmentComponent } from './treatment/treatment.component';
+import { CategoryComponent } from './category/category.component';
+import { TestnomialComponent } from './testnomial/testnomial.component';
+import { FooterComponent } from './footer/footer.component';
+import { UserProductsComponent } from './user-products/user-products.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +34,14 @@ import { UserComponent } from './user/user.component';
     DashboardComponent,
     HomeComponent,
     UserComponent,
+    NavbarComponent,
+    AboutComponent,
+    CardsComponent,
+    TreatmentComponent,
+    CategoryComponent,
+    TestnomialComponent,
+    FooterComponent,
+    UserProductsComponent,
   ],
   imports: [
     BrowserModule,

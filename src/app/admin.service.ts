@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class AdminService {
   private adminurl = 'https://adminlogin-latest.onrender.com/admin';
   private producturl = 'http://localhost:2024/product';
-
+  private orderurl = 'http://localhost:2025/product';
   constructor(private http: HttpClient) {}
 
   getAlldata(data: any): Observable<any> {
@@ -17,10 +17,17 @@ export class AdminService {
   getallprdata(data: any): Observable<any> {
     return this.http.get(`${this.producturl}/data`);
   }
+  getallorders(data: any): Observable<any> {
+    return this.http.get(`${this.producturl}/data`);
+  }
+
   createdata(add: any): Observable<any> {
     return this.http.post(`${this.adminurl}/save`, add);
   }
   createprdata(add: any): Observable<any> {
+    return this.http.post(`${this.producturl}/save`, add);
+  }
+  createorder(add: any): Observable<any> {
     return this.http.post(`${this.producturl}/save`, add);
   }
   updatedata(id: any): Observable<any> {
