@@ -20,12 +20,17 @@ export class AdminService {
   getallorders(data: any): Observable<any> {
     return this.http.get(`${this.producturl}/data`);
   }
-
+  getproductbyid(id: any): Observable<any> {
+    return this.http.get(`${this.producturl}/get/${id}`);
+  }
   createdata(add: any): Observable<any> {
     return this.http.post(`${this.adminurl}/save`, add);
   }
-  createprdata(add: any): Observable<any> {
+  createprdata(add: FormData): Observable<any> {
     return this.http.post(`${this.producturl}/save`, add);
+  }
+  getImageUrl(id: any) {
+    return `${this.producturl}/image/${id}`;
   }
   createorder(add: any): Observable<any> {
     return this.http.post(`${this.producturl}/save`, add);

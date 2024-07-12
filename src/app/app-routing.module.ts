@@ -9,11 +9,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 import { UserProductsComponent } from './user-products/user-products.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'userpr', component: UserProductsComponent },
+  { path: 'pd', component: ProductdetailsComponent },
+  { path: 'addproduct', component: AddproductComponent },
+  { path: 'get/:id', component: ProductdetailsComponent },
   {
     path: 'dashboard',
     component: DashboardComponent,
@@ -21,8 +25,8 @@ const routes: Routes = [
       {
         path: 'products',
         component: ProductsComponent,
-        children: [{ path: 'addproduct', component: AddproductComponent }],
       },
+
       {
         path: 'adminl',
         component: AdminListComponent,

@@ -15,6 +15,7 @@ export class ProductsComponent implements OnInit {
   products: any[] = [];
   deletemsg: String = '';
   productform: FormGroup;
+  selectedFile: File | null = null;
 
   constructor(
     private service: AdminService,
@@ -30,6 +31,10 @@ export class ProductsComponent implements OnInit {
     });
   }
 
+  onFileSelected(event: any) {
+    this.selectedFile = event.target.files[0];
+  }
+
   ngOnInit(): void {
     this.productform = this.fb.group({
       productid: ['', Validators.required],
@@ -42,7 +47,16 @@ export class ProductsComponent implements OnInit {
   }
   onsubmit() {
     if (this.productform.valid) {
-      const formData = this.productform.value;
+      const formData = new FormData();
+      formData.append('productid', this.productform.get('productid')?.value);
+      formData.append('pname', this.productform.get('pname')?.value);
+      formData.append('price', this.productform.get('price')?.value);
+      formData.append('catageroy', this.productform.get('catageroy')?.value);
+      formData.append('details', this.productform.get('details')?.value);
+
+      if (this.selectedFile) {
+        formData.append('file', this.selectedFile);
+      }
       this.service.createprdata(formData).subscribe(
         (response) => {
           console.log('product added  successfully', response);
@@ -65,6 +79,9 @@ export class ProductsComponent implements OnInit {
       (res) => {
         console.log(res, 'data');
         this.products = res;
+        this.products.forEach((product) => {
+          product.imageUrl = this.service.getImageUrl(product.productid);
+        });
       },
 
       (err) => {

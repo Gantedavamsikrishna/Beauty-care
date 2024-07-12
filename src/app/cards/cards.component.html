@@ -12,26 +12,31 @@
       </div>
     </div>
   </div>
+
   <div
     id="carouselExampleIndicators"
     class="carousel slide"
-    data-ride="carousel "
-    data-interval="2000"
+    data-bs-ride="carousel"
+    data-bs-interval="2000"
   >
     <ol class="carousel-indicators">
       <li
-        data-target="#carouselExampleIndicators"
-        data-slide-to="0"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="0"
         class="active"
       ></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="row">
           <div class="col-4">
             <div class="card">
-              <img src="..\assets\OIL.jpg" />
+              <img
+                src="../assets/OIL.jpg"
+                class="card-img-top"
+                alt="OMEGA-3 FISH OIL"
+              />
               <div class="card-body">
                 <h5 class="card-title">OMEGA-3 FISH OIL</h5>
                 <p class="card-text">
@@ -41,10 +46,13 @@
               </div>
             </div>
           </div>
-
           <div class="col-4">
-            <div class="card" style="border-radius: 0px">
-              <img src="../assets/MF.jpg" />
+            <div class="card">
+              <img
+                src="../assets/MF.jpg"
+                class="card-img-top"
+                alt="MOCKUPFREE"
+              />
               <div class="card-body">
                 <h5 class="card-title">MOCKUPFREE</h5>
                 <p class="card-text">
@@ -55,8 +63,12 @@
             </div>
           </div>
           <div class="col-4">
-            <div class="card" style="border-radius: 0px">
-              <img src="../assets/Massage.jpg" />
+            <div class="card">
+              <img
+                src="../assets/Massage.jpg"
+                class="card-img-top"
+                alt="Skin massage tools"
+              />
               <div class="card-body">
                 <h5 class="card-title">Skin massage tools</h5>
                 <p class="card-text">
@@ -71,8 +83,12 @@
       <div class="carousel-item">
         <div class="row">
           <div class="col-4">
-            <div class="card" style="border-radius: 0px">
-              <img src="../assets/OIL.jpg" class="card-img-top" alt="..." />
+            <div class="card">
+              <img
+                src="../assets/OIL.jpg"
+                class="card-img-top"
+                alt="OMEGA-3 FISH OIL"
+              />
               <div class="card-body">
                 <h5 class="card-title">OMEGA-3 FISH OIL</h5>
                 <p class="card-text">
@@ -84,7 +100,11 @@
           </div>
           <div class="col-4">
             <div class="card">
-              <img src="../assets/MF.jpg" class="card-img-top" alt="..." />
+              <img
+                src="../assets/MF.jpg"
+                class="card-img-top"
+                alt="MOCKUPFREE"
+              />
               <div class="card-body">
                 <h5 class="card-title">MOCKUPFREE</h5>
                 <p class="card-text">
@@ -95,8 +115,12 @@
             </div>
           </div>
           <div class="col-4">
-            <div class="card" style="border-radius: 0px">
-              <img src="../assets/Bottle.jpg" class="card-img-top" alt="..." />
+            <div class="card">
+              <img
+                src="../assets/Bottle.jpg"
+                class="card-img-top"
+                alt="Skin massage tools"
+              />
               <div class="card-body">
                 <h5 class="card-title">Skin massage tools</h5>
                 <p class="card-text">
@@ -113,21 +137,20 @@
       class="carousel-control-prev"
       href="#carouselExampleIndicators"
       role="button"
-      data-slide="prev"
+      data-bs-slide="prev"
     >
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <!-- <span class="sr-only">Previous</span> -->
+      <!-- <span class="visually-hidden">Previous</span> -->
     </a>
     <a
       class="carousel-control-next"
       href="#carouselExampleIndicators"
       role="button"
-      data-slide="next"
+      data-bs-slide="next"
     >
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <!-- <span class="sr-only">Next</span> -->
+      <!-- <span class="visually-hidden">Next</span> -->
     </a>
   </div>
 </div>
-
 <app-testnomial></app-testnomial>

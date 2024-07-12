@@ -1,0 +1,105 @@
+.product-container {
+  margin-top: 5pc;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.product-image img {
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.product-details {
+  margin-left: 20px;
+}
+
+.product-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.product-price {
+  font-size: 20px;
+  color: green;
+}
+
+.product-original-price {
+  font-size: 16px;
+  text-decoration: line-through;
+  color: gray;
+}
+
+.product-discount {
+  font-size: 16px;
+  color: red;
+}
+
+.product-description {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.quantity {
+  margin-top: 10px;
+}
+
+.product-actions {
+  margin-top: 20px;
+}
+
+.add-to-bag,
+.shop-now {
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.add-to-bag {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.shop-now {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+#c-2 {
+  margin-top: 5pc;
+  margin-bottom: 5pc;
+}
+
+#c-2 .card {
+  width: 18pc;
+  height: 26.9pc;
+  border: 3px solid burlywood;
+  overflow: hidden;
+}
+#c-2 .row {
+  margin-bottom: 5pc;
+}
+#c-2 .card i {
+  z-index: 1;
+  color: #ffff;
+  position: relative;
+  bottom: 30pc;
+  left: 17pc;
+  font-size: 2rem;
+}
+#c-2 .card img {
+  width: 18pc;
+  height: 18pc;
+}
+.details {
+  font-size: 20px;
+  font-weight: 600;
+}
+.details .cost {
+  margin-top: -18px;
+  margin-bottom: 10px;
+}

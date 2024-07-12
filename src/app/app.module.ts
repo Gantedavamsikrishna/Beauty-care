@@ -22,6 +22,7 @@ import { CategoryComponent } from './category/category.component';
 import { TestnomialComponent } from './testnomial/testnomial.component';
 import { FooterComponent } from './footer/footer.component';
 import { UserProductsComponent } from './user-products/user-products.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { UserProductsComponent } from './user-products/user-products.component';
     TestnomialComponent,
     FooterComponent,
     UserProductsComponent,
+    ProductdetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -34,11 +34,10 @@
           formControlName="pname"
           placeholder="enter product name "
         />
-
         <input
           type="file"
           class="form-control m-3"
-          placeholder="please add picture of product"
+          (change)="onFileSelected($event)"
         />
         <textarea
           name="description"
@@ -75,6 +74,7 @@
       <thead class="sticky-top">
         <tr class="table-success">
           <td>P_id</td>
+          <td>image</td>
           <td>Product name</td>
           <td>Categeroy</td>
           <td>Price</td>
@@ -86,6 +86,9 @@
       <tbody>
         <tr *ngFor="let p of products">
           <td>{{ p.productid }}</td>
+          <td>
+            <img [src]="p.imageUrl" alt="{{ p.pname }}" class="img-thumbnail" />
+          </td>
           <td>{{ p.pname }}</td>
           <td>{{ p.catageroy }}</td>
           <td>{{ p.price }}</td>

@@ -1,7 +1,39 @@
+nav {
+  border-bottom: 3px solid;
+}
+.nav-item {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-left: 2px;
+}
+.active {
+  border-bottom: 3px solid rgb(236, 59, 59);
+}
+.nav-item:hover {
+  padding: 0px;
+  border-bottom: 3px solid rgb(236, 59, 59);
+}
+#car {
+  margin-top: 5pc;
+}
+
+input {
+  border: none;
+  border-bottom: 3px solid;
+  width: 30pc;
+  margin-left: 5pc;
+}
+i {
+  font-size: 30px;
+  margin-left: 1pc;
+  color: red;
+}
+
 #c-1 {
   margin-top: 3pc;
 }
 #c-1 .card {
+  border: none;
   width: 20pc;
   height: 15pc;
 }
@@ -10,19 +42,44 @@
   font-size: 18px;
   font-weight: 600;
 }
+#c-1 .m1 img {
+  width: 8pc;
+  margin-left: 4pc;
+}
+#c-1 .m2 img {
+  margin-left: 3pc;
+  width: 10pc;
+  margin-bottom: 1pc;
+}
+#c-1 .m3 img {
+  margin-left: -1pc;
+  width: 18pc;
+  margin-bottom: 1pc;
+}
+#c-1 .m4 img {
+  margin-left: 4pc;
+  width: 10pc;
+  margin-bottom: 1pc;
+}
+#c-1 .m5 img {
+  margin-top: 15px;
+  margin-left: 3pc;
+  width: 10pc;
+  margin-bottom: 1pc;
+}
 #c-2 {
   margin-top: 5pc;
   margin-bottom: 5pc;
 }
 
 #c-2 .card {
-  width: 20pc;
-  height: 31pc;
+  width: 18pc;
+  height: 26.9pc;
   border: 3px solid burlywood;
   overflow: hidden;
 }
 #c-2 .row {
-  margin-bottom: 2pc;
+  margin-bottom: 5pc;
 }
 #c-2 .card i {
   z-index: 1;
@@ -33,8 +90,8 @@
   font-size: 2rem;
 }
 #c-2 .card img {
-  width: 20pc;
-  height: auto;
+  width: 18pc;
+  height: 18pc;
 }
 .details {
   font-size: 20px;

@@ -31,7 +31,7 @@ nav {
   margin-left: 4pc;
 }
 
-.box {
+img {
   margin-top: 8em;
   background-color: black;
   display: block;
@@ -44,17 +44,17 @@ nav {
 .borde1 {
   width: 30pc;
   height: 35pc;
-  position: relative;
   border: 3px solid #ffff;
   border-radius: 1.5pc;
-  top: 40px;
-  right: 40px;
+  position: relative;
+  bottom: 33pc;
+  left: 8pc;
 }
 p {
   font-size: 20px;
   margin-left: 3em;
 }
-.btn {
+.container-1 .btn {
   margin-left: 15em;
   border-radius: 27px;
   padding: 13px 45px;

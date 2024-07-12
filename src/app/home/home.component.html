@@ -28,13 +28,28 @@
           <a class="nav-link" routerLink="/" fragment="about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/" fragment="skills">Skills</a>
+          <a class="nav-link" routerLink="/userpr">Shopping</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/" fragment="projects">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/landing">login</a>
+          <a
+            class="nav-link"
+            routerLink="/landin"
+            data-bs-toggle="modal"
+            data-bs-target="#regiModal"
+            >Signup</a
+          >
+        </li>
+        <li>
+          <a
+            class="nav-link"
+            routerLink="/landin"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal"
+            >/login</a
+          >
         </li>
       </ul>
     </div>
@@ -62,9 +77,111 @@
         <button class="btn btn-primary">shop Now</button>
       </div>
       <div class="col-12 col-lg-6">
-        <div class="box"><div class="borde1"></div></div>
+        <img src="../assets/dropper.jpg" alt="" />
+        <div class="borde1"></div>
       </div>
     </div>
   </div>
 </div>
+<div
+  class="modal fade"
+  id="regiModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!-- Added modal-lg class to increase width -->
+    <div class="modal-content border-0">
+      <div class="modal-header border-0">
+        <h5 class="modal-title text-danger">Connect with Care</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <input
+            type="text"
+            class="form-control mb-3"
+            placeholder="Enter your name.."
+          />
+          <input
+            type="email"
+            class="form-control mb-3"
+            placeholder="Enter your mail.."
+          />
+          <input
+            type="password"
+            class="form-control mb-3"
+            placeholder="Enter new password.."
+          />
+          <input
+            type="text"
+            class="form-control mb-3"
+            placeholder="Enter your number.."
+          />
+        </div>
+      </div>
+      <div class="modal-footer border-0">
+        <button
+          type="reset"
+          class="btn btn-secondary d-flex justify-content-start"
+          data-bs-dismiss="modal"
+        >
+          clear
+        </button>
+
+        <button type="button" class="btn btn-primary">SignUp</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="loginModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-md">
+    <div class="modal-content border-0">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <form id="loginForm">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control mb-3"
+                placeholder="Username"
+                required
+              />
+              <input
+                type="password"
+                class="form-control mb-3"
+                placeholder="Password"
+                required
+              />
+              <button type="submit" class="btn btn-primary w-100">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <app-about></app-about>
