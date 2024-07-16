@@ -1,0 +1,432 @@
+nav {
+  background-color: #fff;
+  transition: background-color 0.3s ease-in;
+}
+.content {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#con1 {
+  overflow: hidden;
+  background-color: #ffedbd;
+  height: 100vh;
+}
+
+#navbarNav {
+  margin-left: 15pc;
+}
+li a {
+  color: black;
+  font-size: 20px;
+}
+
+li i {
+  color: red;
+  font-size: 25px;
+  margin: 1pc;
+}
+#con11 {
+  margin-top: 3pc;
+}
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+}
+
+.marquee-content img {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+#con1 .row {
+  margin-top: 6pc;
+}
+#con1 .col-5 img {
+  width: 38pc;
+  height: auto;
+}
+#con1 .text h5 {
+  font-size: 25px;
+  margin-top: 8pc;
+  font-weight: 200;
+}
+#con1 .text h3 {
+  font-size: 45px;
+  margin-top: 2pc;
+}
+#con1 .text p {
+  font-style: italic;
+  font-weight: 200;
+  font-size: 18px;
+  margin-top: 1pc;
+}
+#con1 .btn {
+  margin-top: 3pc;
+  font-family: "Times New Roman", Times, serif;
+  border-radius: 0px;
+  background: rgb(228, 220, 193);
+  padding: 10px 45px;
+}
+
+.col img {
+  margin-top: 5pc;
+  width: 37pc;
+  height: auto;
+  margin-bottom: 3pc;
+}
+
+.flower img {
+  width: 10pc;
+  margin-left: 35pc;
+  height: auto;
+}
+
+.flower-1 img {
+  width: 15pc;
+  margin-left: 30pc;
+  margin-top: -15pc;
+  height: auto;
+}
+.bgflowe img {
+  width: 10pc;
+  height: auto;
+  position: relative;
+  bottom: 42pc;
+  left: 11pc;
+  z-index: -1;
+  animation: rotate 3s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#con2 .text {
+  margin-left: 7pc;
+}
+#con2 .text h2 {
+  font-size: 40px;
+}
+.side-2 img {
+  width: 28pc;
+  margin-left: 15pc;
+}
+#con3 {
+  margin-top: -14pc;
+  margin-bottom: 5pc;
+}
+
+#con3 img {
+  width: 21pc;
+  height: 28pc;
+}
+
+#con3 i {
+  font-size: 20px;
+  color: gold;
+}
+#con4 .box1 {
+  background: url("/assets/box-1.webp");
+  background-size: cover;
+  margin-bottom: 15px;
+  border: solid;
+  width: 30.7pc;
+  height: 18pc;
+}
+#con4 .box2 {
+  background: url("/assets/box-2.webp");
+  background-size: cover;
+  margin-bottom: 15px;
+  border: solid;
+  width: 30.7pc;
+  height: 18pc;
+}
+#con4 .box4 {
+  background: url("/assets/box-4.webp");
+  background-size: cover;
+  margin-bottom: 15px;
+  border: solid;
+  width: 30.7pc;
+  height: 18pc;
+}
+#con4 .box5 {
+  background: url("/assets/box-5.webp");
+  background-size: cover;
+  margin-bottom: 15px;
+  border: solid;
+  width: 30.7pc;
+  height: 18pc;
+}
+#con4 .box3 {
+  background: url("/assets/box-3.webp");
+  background-size: cover;
+  margin-bottom: 15px;
+  width: 30.6pc;
+  height: 37pc;
+  border: solid;
+}
+#con4 .names {
+  margin-top: 4pc;
+  margin-left: 5pc;
+}
+#con4 .names2 {
+  margin-top: 4pc;
+  margin-left: 20pc;
+}
+#con4 .name3 {
+  margin-top: 15pc;
+  margin-left: 5pc;
+}
+#con4 p {
+  font-size: 1em;
+  font-weight: 200;
+  margin: 0;
+}
+
+#con4 h4 {
+  font-size: 2em;
+}
+#con4 .btn {
+  padding: 0;
+  border-radius: 0;
+  border-bottom: 2px solid;
+}
+#con4 {
+  margin-top: 10pc;
+  margin-bottom: 5pc;
+}
+
+#con5 .box {
+  background: url("/assets/right.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 110vh;
+}
+#con5 .box img {
+  width: 30pc;
+  height: auto;
+  margin-top: 24pc;
+  margin-left: -12pc;
+}
+#con5 .text {
+  margin-top: 2pc;
+  margin-left: 15px;
+}
+#con5 .text h3 {
+  margin-top: 2pc;
+  font-size: 2.5em;
+}
+#con5 .text p {
+  margin-top: 2pc;
+}
+#con5 .btn {
+  border: #ffedbd;
+  border-radius: 0px;
+  padding: 10px 40px;
+  background: #ffedbd;
+  margin-top: 1pc;
+  margin-left: 2pc;
+}
+
+#con5 table {
+  margin-top: 5pc;
+}
+#con5 tr {
+  margin-top: 2pc;
+}
+#con5 td img {
+  width: 5pc;
+  height: 5pc;
+  margin-left: 2pc;
+}
+#con5 .last img {
+  width: 8pc;
+  height: 8pc;
+  margin-left: 4px;
+}
+#con5 {
+  margin-top: 10pc;
+}
+#con6 {
+  margin-top: 10pc;
+  margin-bottom: 5pc;
+}
+
+#con6 .box {
+  padding: 2pc;
+  background: #f4ecda;
+  width: 22pc;
+  height: 32pc;
+}
+
+#con6 .card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  background: #faf7f2;
+  border: none;
+  border-radius: 0;
+  margin-top: 22px;
+  width: 19pc;
+  height: 7pc;
+}
+#con6 .card img {
+  width: 8pc;
+  height: 6pc;
+  margin-top: 0px;
+}
+
+#con6 .card .details {
+  margin-left: 10px;
+  margin-top: 15px;
+}
+#con6 .card .details i {
+  color: gold;
+}
+
+#con7 .details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+hr {
+  position: relative;
+  top: 5.5pc;
+  border: 1px solid;
+}
+#con7 .card {
+  background: url("/assets/brush.webp");
+  background-position: center;
+  background-size: cover;
+  border: none;
+  width: 20pc;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#con7 .card img {
+  border-radius: 8pc;
+  width: 8pc;
+  height: 8pc;
+}
+
+#con7 .head h3 {
+  font-size: 3em;
+}
+#con81 {
+  background-color: #e5d7bc;
+}
+#con8 {
+  margin-top: 5pc;
+  background: url("/assets/flowe bg.png");
+  background-size: cover;
+  height: 70vh;
+  padding-top: 5px;
+}
+
+#con8 .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#con8 .header h6 {
+  margin-top: 3pc;
+  font-size: 20px;
+}
+#con8 .header h2 {
+  font-size: 3em;
+}
+
+#con8 .products {
+  font-size: 3em;
+  font-weight: 500;
+}
+
+#con8 .name {
+  font-size: 1em;
+}
+
+#con9 {
+  margin-top: 4pc;
+}
+
+#con9 .box {
+  width: 30pc;
+  height: 40pc;
+  display: flex;
+  flex-direction: column;
+}
+#con9 .box img {
+  width: 28pc;
+  height: auto;
+}
+
+#con9 .box a {
+  width: 20%;
+  border-bottom: 1px solid;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+footer .col {
+  margin-top: 5pc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-right: 2px solid;
+}
+footer .box {
+  display: flex;
+  flex-direction: row;
+}
+#con10 {
+  background-color: #f7efe0;
+}
+footer .box i {
+  border-radius: 40px;
+  padding: 8px 16px;
+  font-size: 2em;
+  margin: 1pc;
+  background: #d8d1c1;
+}
+footer {
+  background: url("/assets/flowe bg.png");
+  background-size: cover;
+  height: 40vh;
+}

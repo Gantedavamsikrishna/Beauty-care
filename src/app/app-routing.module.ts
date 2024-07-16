@@ -6,14 +6,14 @@ import { AdminListComponent } from './admin-list/admin-list.component';
 import { AdminRegComponent } from './admin-reg/admin-reg.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 import { UserProductsComponent } from './user-products/user-products.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomepageComponent },
   { path: 'userpr', component: UserProductsComponent },
   { path: 'pd', component: ProductdetailsComponent },
   { path: 'addproduct', component: AddproductComponent },
