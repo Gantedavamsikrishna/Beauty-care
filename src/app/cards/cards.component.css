@@ -1,0 +1,53 @@
+#c-2 {
+  margin-top: 5pc;
+  margin-bottom: 5pc;
+  align-items: center;
+}
+
+#c-2 .card {
+  background: transparent;
+  border: none;
+  width: 20pc;
+  height: 26pc;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgb(0 0 0 / 10%);
+  transition: all 0.2s ease-in-out;
+}
+#c-2 .card:hover {
+  background: transparent;
+  border: none;
+  width: 22pc;
+  height: 27pc;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgb(0 0 0 / 50%);
+}
+#c-2 .row {
+  margin-bottom: 5pc;
+}
+#c-2 i {
+  z-index: 1;
+  color: #211f1f;
+  position: relative;
+  bottom: 32pc;
+  left: 16pc;
+  font-size: 2rem;
+}
+#c-2 .card img {
+  width: 20pc;
+  height: auto;
+  transition: all 0.2s ease-in-out;
+}
+#c-2 .card img:hover {
+  width: 22pc;
+  height: auto;
+}
+
+.details {
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.details .cost {
+  margin-top: -18px;
+  margin-bottom: 10px;
+}

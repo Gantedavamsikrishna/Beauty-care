@@ -1,9 +1,44 @@
-.product-container {
+#con1 {
+  background: url("/assets/bread-crumb-img.jpg");
+  background-size: cover;
+  height: 60vh;
+}
+#con1 .container-fluid {
+  padding-top: 5pc;
+  height: 60vh;
+  background-color: rgba(236, 229, 204, 0.5);
+}
+
+#con {
+  margin-top: 5pc;
+  height: 75vh;
+  overflow: hidden;
+}
+.product-img {
+  display: flex;
+
+  justify-content: center;
+}
+.product-img img {
+  width: 30pc;
+  height: auto;
+}
+.details {
+  margin-top: 4pc;
+}
+
+button {
+  background: #ecdec1;
+  border: 1px solid;
+  padding: 10px 20px;
+  margin-right: 35px;
+}
+
+/* .product-container {
   margin-top: 5pc;
   display: flex;
   flex-direction: row;
   padding: 20px;
-  margin-left: 6pc;
 }
 
 .product-image img {
@@ -71,7 +106,7 @@
   color: #fff;
   border: none;
   border-radius: 5px;
-}
+} */
 
 #c-2 {
   margin-top: 5pc;

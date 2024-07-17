@@ -1,7 +1,3 @@
-nav {
-  background-color: #fff;
-  transition: background-color 0.3s ease-in;
-}
 .content {
   opacity: 0;
   transform: translateY(50px);
@@ -19,19 +15,6 @@ nav {
   height: 100vh;
 }
 
-#navbarNav {
-  margin-left: 15pc;
-}
-li a {
-  color: black;
-  font-size: 20px;
-}
-
-li i {
-  color: red;
-  font-size: 25px;
-  margin: 1pc;
-}
 #con11 {
   margin-top: 3pc;
 }
@@ -133,7 +116,11 @@ li i {
   margin-left: 7pc;
 }
 #con2 .text h2 {
-  font-size: 40px;
+  font-size: 45px;
+  font-weight: 600;
+}
+#con2 .text span {
+  font-size: 16px;
 }
 .side-2 img {
   width: 28pc;
@@ -157,7 +144,7 @@ li i {
   background: url("/assets/box-1.webp");
   background-size: cover;
   margin-bottom: 15px;
-  border: solid;
+  border: 1px solid;
   width: 30.7pc;
   height: 18pc;
 }
@@ -165,7 +152,7 @@ li i {
   background: url("/assets/box-2.webp");
   background-size: cover;
   margin-bottom: 15px;
-  border: solid;
+  border: 1px solid;
   width: 30.7pc;
   height: 18pc;
 }
@@ -173,7 +160,7 @@ li i {
   background: url("/assets/box-4.webp");
   background-size: cover;
   margin-bottom: 15px;
-  border: solid;
+  border: 1px solid;
   width: 30.7pc;
   height: 18pc;
 }
@@ -181,7 +168,7 @@ li i {
   background: url("/assets/box-5.webp");
   background-size: cover;
   margin-bottom: 15px;
-  border: solid;
+  border: 1px solid;
   width: 30.7pc;
   height: 18pc;
 }
@@ -191,7 +178,7 @@ li i {
   margin-bottom: 15px;
   width: 30.6pc;
   height: 37pc;
-  border: solid;
+  border: 1px solid;
 }
 #con4 .names {
   margin-top: 4pc;
@@ -281,6 +268,7 @@ li i {
 }
 
 #con6 .box {
+  margin-top: 2pc;
   padding: 2pc;
   background: #f4ecda;
   width: 22pc;
@@ -409,7 +397,6 @@ footer .col {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  border-right: 2px solid;
 }
 footer .box {
   display: flex;
@@ -417,16 +404,4 @@ footer .box {
 }
 #con10 {
   background-color: #f7efe0;
-}
-footer .box i {
-  border-radius: 40px;
-  padding: 8px 16px;
-  font-size: 2em;
-  margin: 1pc;
-  background: #d8d1c1;
-}
-footer {
-  background: url("/assets/flowe bg.png");
-  background-size: cover;
-  height: 40vh;
 }

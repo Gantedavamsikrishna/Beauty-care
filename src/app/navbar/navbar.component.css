@@ -1,0 +1,17 @@
+nav {
+  background-color: #fff;
+  transition: background-color 0.3s ease-in;
+  box-shadow: 0 0 25px rgb(0 0 0 / 50%);
+}
+#navbarNav {
+  margin-left: 15pc;
+}
+li a {
+  color: black;
+  font-size: 20px;
+}
+
+li i {
+  font-size: 25px;
+  margin: 1pc;
+}
