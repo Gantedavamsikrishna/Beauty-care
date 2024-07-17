@@ -75,57 +75,6 @@
   padding: 10px 45px;
 }
 
-.col img {
-  margin-top: 5pc;
-  width: 37pc;
-  height: auto;
-  margin-bottom: 3pc;
-}
-
-.flower img {
-  width: 10pc;
-  margin-left: 35pc;
-  height: auto;
-}
-
-.flower-1 img {
-  width: 15pc;
-  margin-left: 30pc;
-  margin-top: -15pc;
-  height: auto;
-}
-.bgflowe img {
-  width: 10pc;
-  height: auto;
-  position: relative;
-  bottom: 42pc;
-  left: 11pc;
-  z-index: -1;
-  animation: rotate 3s linear infinite;
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-#con2 .text {
-  margin-left: 7pc;
-}
-#con2 .text h2 {
-  font-size: 45px;
-  font-weight: 600;
-}
-#con2 .text span {
-  font-size: 16px;
-}
-.side-2 img {
-  width: 28pc;
-  margin-left: 15pc;
-}
 #con3 {
   margin-top: -14pc;
   margin-bottom: 5pc;
@@ -389,19 +338,4 @@ hr {
   text-decoration: none;
   color: black;
   padding: 5px;
-}
-footer .col {
-  margin-top: 5pc;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-footer .box {
-  display: flex;
-  flex-direction: row;
-}
-#con10 {
-  background-color: #f7efe0;
 }
