@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class AdminService {
   private adminurl = 'https://adminlogin-latest.onrender.com/admin';
-  private producturl = 'http://localhost:2024/product';
+  private producturl = 'https://products-api-44eo.onrender.com/product';
   private orderurl = 'http://localhost:2025/product';
   constructor(private http: HttpClient) {}
 

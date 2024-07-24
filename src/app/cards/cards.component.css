@@ -5,10 +5,11 @@
 }
 
 #c-2 .card {
+  cursor: pointer;
   background: transparent;
   border: none;
   width: 20pc;
-  height: 26pc;
+  height: 25pc;
   overflow: hidden;
   box-shadow: 0 0 25px rgb(0 0 0 / 10%);
   transition: all 0.2s ease-in-out;
@@ -28,18 +29,18 @@
   z-index: 1;
   color: #211f1f;
   position: relative;
-  bottom: 32pc;
+  bottom: 31pc;
   left: 16pc;
   font-size: 2rem;
 }
 #c-2 .card img {
   width: 20pc;
-  height: auto;
+  height: 25pc;
   transition: all 0.2s ease-in-out;
 }
 #c-2 .card img:hover {
   width: 22pc;
-  height: auto;
+  height: 27pc;
 }
 
 .details {
@@ -50,4 +51,7 @@
 .details .cost {
   margin-top: -18px;
   margin-bottom: 10px;
+}
+.row {
+  margin-left: 1.5pc;
 }

@@ -12,6 +12,13 @@ li a {
 }
 
 li i {
+  cursor: pointer;
   font-size: 25px;
   margin: 1pc;
+}
+li i:hover {
+  color: red;
+}
+li a:hover {
+  color: red;
 }

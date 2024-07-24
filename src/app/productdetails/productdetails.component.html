@@ -9,15 +9,16 @@
   <div class="row">
     <div class="col">
       <div class="product-img">
-        <img src="../assets/p-1.jpg" alt="" />
+        <img [src]="product.imageUrl" alt="Product Image" />
       </div>
     </div>
     <div class="col">
       <div class="details">
-        <h1>powder</h1>
-        <div class="price">250/-</div>
+        <h1>{{ product.pname }}</h1>
+        <div class="price">{{ product.price }}/-</div>
         <div class="rating">****</div>
         <p>
+          {{ product.details }}
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni
           eum amet, id cum omnis ab laboriosam accusantium tempora quibusdam,
           adipisci sapiente sit cupiditate maxime tempore eaque est repellendus

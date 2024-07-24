@@ -11,7 +11,7 @@
 
 #con1 {
   overflow: hidden;
-  background-color: #ffedbd;
+  background: url("/assets/homebg-1.jpg");
   height: 100vh;
 }
 

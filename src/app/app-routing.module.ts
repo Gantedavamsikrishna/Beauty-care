@@ -10,13 +10,14 @@ import { UserComponent } from './user/user.component';
 import { UserProductsComponent } from './user-products/user-products.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomepageComponent },
   { path: 'products', component: UserProductsComponent },
   { path: 'product-details', component: ProductdetailsComponent },
-
+  { path: 'user/login', component: LoginComponent },
   { path: 'get/:id', component: ProductdetailsComponent },
   {
     path: 'dashboard',

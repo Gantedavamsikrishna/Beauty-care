@@ -1,0 +1,25 @@
+.box {
+  width: 55%;
+  height: auto;
+  margin-top: 10pc;
+
+  padding: 2pc;
+  box-shadow: 0 0 35px rgba(101, 96, 96, 0.2);
+}
+h2 {
+  color: rgb(249, 130, 150);
+}
+.btn {
+  border: 1px solid #fff;
+  background: rgb(249, 130, 150);
+}
+i {
+  cursor: pointer;
+  font-size: 25px;
+  color: rgb(249, 130, 150);
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgb(91, 131, 218);
+}
