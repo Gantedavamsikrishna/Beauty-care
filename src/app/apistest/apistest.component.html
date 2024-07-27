@@ -1,0 +1,11 @@
+<p>Page {{ readdata?.page }} of {{ readdata?.total_pages }}</p>
+<p>Total Users: {{ readdata?.total }}</p>
+<div *ngIf="readdata">
+  <p>Page {{ readdata.page }} of {{ readdata.total_pages }}</p>
+  <p>Total Users: {{ readdata.total }}</p>
+  <div *ngFor="let user of readdata.data">
+    <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+    <p>Email: {{ user.email }}</p>
+    <img src="{{ user.avatar }}" alt="User Avatar" />
+  </div>
+</div>

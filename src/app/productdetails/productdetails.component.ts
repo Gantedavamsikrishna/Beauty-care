@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./productdetails.component.css'],
 })
 export class ProductdetailsComponent implements OnInit {
+  readdata: any;
   shopNow() {
     throw new Error('Method not implemented.');
   }

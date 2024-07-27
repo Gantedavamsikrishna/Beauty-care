@@ -23,6 +23,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CardsComponent } from './cards/cards.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
+import { ApistestComponent } from './apistest/apistest.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { LoginComponent } from './login/login.component';
     CardsComponent,
     AboutComponent,
     LoginComponent,
+    ApistestComponent,
   ],
   imports: [
     BrowserModule,
