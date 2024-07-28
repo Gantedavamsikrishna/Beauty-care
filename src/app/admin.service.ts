@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -9,13 +9,17 @@ export class AdminService {
   private adminurl = 'https://adminlogin-latest.onrender.com/admin';
   private producturl = 'https://products-api-44eo.onrender.com/product';
   private orderurl = 'https://reqres.in/api';
+
   constructor(private http: HttpClient) {}
 
   getAlldata(data: any): Observable<any> {
     return this.http.get(`${this.adminurl}/data`);
   }
   getallprdata(data: any): Observable<any> {
-    return this.http.get(`${this.producturl}/data`);
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+    return this.http.get(`${this.producturl}/data`, { headers });
   }
   getallordedata(users: any): Observable<any> {
     return this.http.get(`${this.orderurl}/users`);

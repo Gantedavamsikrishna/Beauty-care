@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../admin.service';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-apistest',
