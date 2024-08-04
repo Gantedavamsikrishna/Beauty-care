@@ -11,8 +11,51 @@
 
 #con1 {
   overflow: hidden;
-  background: url("/assets/homebg-1.jpg");
+  background: url("/assets/homebg-1.jpg") no-repeat center center;
+  background-size: cover;
   height: 100vh;
+
+  align-items: center;
+}
+
+#con1 .animated-btn {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #ffebd4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  transition: color 0.4s ease-in, background-color 0.4s ease;
+}
+
+#con1 .animated-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #2ecc71;
+  transition: left 0.4s ease;
+  z-index: 0;
+}
+
+#con1 .animated-btn:hover::before {
+  left: 0;
+}
+
+#con1 .animated-btn:hover {
+  color: #fff;
+  background-color: transparent;
+}
+
+#con1 .animated-btn span {
+  position: relative;
+  z-index: 1;
 }
 
 #con11 {
@@ -76,13 +119,16 @@
 }
 
 #con3 {
-  margin-top: -14pc;
+  margin-top: 0pc;
   margin-bottom: 5pc;
 }
 
 #con3 img {
-  width: 21pc;
-  height: 28pc;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 #con3 i {
@@ -94,7 +140,7 @@
   background-size: cover;
   margin-bottom: 15px;
   border: 1px solid;
-  width: 30.7pc;
+  width: 100%;
   height: 18pc;
 }
 #con4 .box2 {
@@ -102,7 +148,7 @@
   background-size: cover;
   margin-bottom: 15px;
   border: 1px solid;
-  width: 30.7pc;
+  width: 100%;
   height: 18pc;
 }
 #con4 .box4 {
@@ -110,7 +156,7 @@
   background-size: cover;
   margin-bottom: 15px;
   border: 1px solid;
-  width: 30.7pc;
+  width: 100%;
   height: 18pc;
 }
 #con4 .box5 {
@@ -118,14 +164,14 @@
   background-size: cover;
   margin-bottom: 15px;
   border: 1px solid;
-  width: 30.7pc;
+  width: 100%;
   height: 18pc;
 }
 #con4 .box3 {
   background: url("/assets/box-3.webp");
   background-size: cover;
   margin-bottom: 15px;
-  width: 30.6pc;
+  width: 100%;
   height: 37pc;
   border: 1px solid;
 }
@@ -161,10 +207,9 @@
 }
 
 #con5 .box {
-  background: url("/assets/right.jpg");
-  background-size: cover;
+  background: url("/assets/right.jpg") no-repeat center center/cover;
   width: 100%;
-  height: 110vh;
+  height: 100%;
 }
 #con5 .box img {
   width: 30pc;
@@ -220,7 +265,7 @@
   margin-top: 2pc;
   padding: 2pc;
   background: #f4ecda;
-  width: 22pc;
+  width: 100%;
   height: 32pc;
 }
 
@@ -232,7 +277,7 @@
   border: none;
   border-radius: 0;
   margin-top: 22px;
-  width: 19pc;
+  width: 100%;
   height: 7pc;
 }
 #con6 .card img {
@@ -289,7 +334,7 @@ hr {
   margin-top: 5pc;
   background: url("/assets/flowe bg.png");
   background-size: cover;
-  height: 70vh;
+  height: auto;
   padding-top: 5px;
 }
 
@@ -322,20 +367,99 @@ hr {
 }
 
 #con9 .box {
-  width: 30pc;
-  height: 40pc;
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
 }
 #con9 .box img {
-  width: 28pc;
+  width: 100%;
   height: auto;
 }
 
 #con9 .box a {
-  width: 20%;
-  border-bottom: 1px solid;
+  width: 50%;
+
   text-decoration: none;
   color: black;
   padding: 5px;
+}
+@media (max-width: 768px) {
+  #con1 {
+    height: auto;
+    padding: 20px;
+  }
+
+  #con1 .animated-btn {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  #con1 .text h3 {
+    font-size: 1.5rem;
+  }
+
+  #con1 .text p {
+    font-size: 0.9rem;
+  }
+
+  .col-6 img {
+    width: 100%;
+    height: 50%;
+  }
+  #con3 i {
+    font-size: 1.2em;
+    color: gold;
+  }
+  #con5 .box img {
+    width: 100%;
+    height: auto;
+    margin-top: 40pc;
+    margin-left: -8pc;
+    display: block;
+    object-fit: cover;
+  }
+
+  #con5 .text {
+    margin-left: 0;
+  }
+
+  #con5 .text h3 {
+    font-size: 1.8em;
+  }
+
+  #con5 .btn {
+    margin-left: 0;
+  }
+
+  #con5 table {
+    margin-top: 2pc;
+  }
+
+  #con5 td img {
+    width: 4pc;
+    height: 4pc;
+    margin-left: 0;
+  }
+
+  #con5 .last img {
+    width: 6pc;
+    height: 6pc;
+  }
+  #con8 .header h6 {
+    margin-top: 1pc;
+    font-size: 0.9em;
+  }
+
+  #con8 .header h2 {
+    font-size: 1.2em;
+  }
+
+  #con8 .products {
+    font-size: 1.5em;
+  }
+
+  #con8 .name {
+    font-size: 0.8em;
+  }
 }

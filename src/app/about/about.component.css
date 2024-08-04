@@ -1,4 +1,4 @@
-.col img {
+img {
   margin-top: 5pc;
   width: 37pc;
   height: auto;
@@ -48,4 +48,30 @@
 .side-2 img {
   width: 28pc;
   margin-left: 15pc;
+}
+
+@media (max-width: 767px) {
+  img {
+    width: 100%;
+    margin-top: 3pc;
+    margin-bottom: 2pc;
+  }
+  .flower img {
+    width: 0%;
+  }
+  .flower-1 img {
+    width: 0pc;
+  }
+  #con2 .text {
+    font-size: 1.2em;
+    margin-left: 0;
+    text-align: center;
+  }
+  .side-2 img {
+    width: 100%;
+    margin-left: 0;
+  }
+  .bgflowe img {
+    width: 0%;
+  }
 }

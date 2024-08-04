@@ -2,6 +2,7 @@
   background: url("/assets/bread-crumb-img.jpg");
   background-size: cover;
   height: 60vh;
+  font-family: "Times New Roman", Times, serif;
 }
 #con1 .container-fluid {
   padding-top: 5pc;
@@ -25,6 +26,9 @@
 }
 .details {
   margin-top: 4pc;
+}
+.details p {
+  font-weight: 100;
 }
 
 button {
