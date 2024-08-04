@@ -24,6 +24,7 @@ import { CardsComponent } from './cards/cards.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { ApistestComponent } from './apistest/apistest.component';
+import { GellaryComponent } from './gellary/gellary.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ApistestComponent } from './apistest/apistest.component';
     AboutComponent,
     LoginComponent,
     ApistestComponent,
+    GellaryComponent,
   ],
   imports: [
     BrowserModule,
