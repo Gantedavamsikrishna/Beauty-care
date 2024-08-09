@@ -1,0 +1,37 @@
+#con6 {
+  margin-top: 10pc;
+  margin-bottom: 5pc;
+}
+
+.box {
+  margin-top: 2pc;
+  padding: 2pc;
+  background: #f4ecda;
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  background: #faf7f2;
+  border: none;
+  border-radius: 0;
+  margin-top: 22px;
+  width: 100%;
+  height: auto;
+}
+.card img {
+  width: 30%;
+  height: auto;
+  margin-top: 0px;
+}
+
+.card .details {
+  margin-left: 10px;
+  margin-top: 15px;
+}
+.card .details i {
+  color: gold;
+}

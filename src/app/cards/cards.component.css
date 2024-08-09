@@ -1,57 +1,62 @@
 #c-2 {
   margin-top: 5pc;
   margin-bottom: 5pc;
-  align-items: center;
 }
 
 #c-2 .card {
   cursor: pointer;
   background: transparent;
   border: none;
-  width: 20pc;
-  height: 25pc;
+  width: 100%;
+  height: auto;
   overflow: hidden;
   box-shadow: 0 0 25px rgb(0 0 0 / 10%);
   transition: all 0.2s ease-in-out;
 }
+
 #c-2 .card:hover {
-  background: transparent;
-  border: none;
-  width: 22pc;
-  height: 27pc;
-  overflow: hidden;
   box-shadow: 0 0 30px rgb(0 0 0 / 50%);
 }
-#c-2 .row {
-  margin-bottom: 5pc;
+
+#c-2 .card img {
+  width: 100%;
+  height: auto;
+  transition: all 0.2s ease-in-out;
 }
+
 #c-2 i {
   z-index: 1;
   color: #211f1f;
-  position: relative;
-  bottom: 31pc;
-  left: 16pc;
   font-size: 2rem;
-}
-#c-2 .card img {
-  width: 20pc;
-  height: 25pc;
-  transition: all 0.2s ease-in-out;
-}
-#c-2 .card img:hover {
-  width: 22pc;
-  height: 27pc;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }
 
 .details {
-  margin-top: 5px;
-  font-size: 20px;
+  margin-top: 10px;
+  font-size: 18px;
   font-weight: 600;
 }
+
 .details .cost {
-  margin-top: -18px;
+  margin-top: -8px;
   margin-bottom: 10px;
 }
-.row {
-  margin-left: 1.5pc;
+
+@media (max-width: 575.98px) {
+  .details {
+    font-size: 16px;
+    margin-bottom: 3pc;
+  }
+
+  #c-2 i {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #c-2 {
+    padding: 0 10px;
+  }
 }

@@ -47,7 +47,7 @@ img {
 }
 .side-2 img {
   width: 28pc;
-  margin-left: 15pc;
+  margin-left: 14pc;
 }
 
 @media (max-width: 767px) {
@@ -57,10 +57,16 @@ img {
     margin-bottom: 2pc;
   }
   .flower img {
-    width: 0%;
+    width: 0px;
+    margin-left: 0;
+    height: 0;
   }
+
   .flower-1 img {
-    width: 0pc;
+    width: 0px;
+    margin-left: 0px;
+    margin-top: 0;
+    height: 0;
   }
   #con2 .text {
     font-size: 1.2em;

@@ -14,24 +14,36 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <div
+      class="collapse navbar-collapse justify-content-center"
+      id="navbarNav"
+      #navbarNav
+    >
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" routerLink="home">Home</a>
+          <a class="nav-link" routerLink="home" (click)="closeNav()">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/" fragment="about">About</a>
+          <a
+            class="nav-link"
+            routerLink="/"
+            fragment="about"
+            (click)="closeNav()"
+            >About</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/products">Shopping</a>
+          <a class="nav-link" routerLink="/products" (click)="closeNav()"
+            >Shopping</a
+          >
         </li>
-
         <li class="nav-item">
-          <a class="nav-link" routerLink="/home">Gallery</a>
+          <a class="nav-link" routerLink="/home" (click)="closeNav()"
+            >Gallery</a
+          >
         </li>
-
         <li class="nav-item">
-          <a class="nav-link" routerLink="/home">Blog</a>
+          <a class="nav-link" routerLink="/home" (click)="closeNav()">Blog</a>
         </li>
       </ul>
     </div>

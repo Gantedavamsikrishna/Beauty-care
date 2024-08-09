@@ -71,11 +71,18 @@ span {
     margin: 5px 0;
   }
 
-  .navbar-nav .nav-item i {
-    font-size: 1.2rem;
+  .navbar-nav {
+    background-color: #343a40;
+    text-align: center;
+    border-radius: 20px;
   }
 
-  .navbar-collapse {
-    justify-content: center !important;
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 15px;
+    color: white;
   }
 }

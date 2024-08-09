@@ -3,15 +3,15 @@
   margin-bottom: 5pc;
 }
 
-#con6 .box {
+.box {
   margin-top: 2pc;
   padding: 2pc;
   background: #f4ecda;
   width: 100%;
-  height: 32pc;
+  height: auto;
 }
 
-#con6 .card {
+.card {
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -20,18 +20,18 @@
   border-radius: 0;
   margin-top: 22px;
   width: 100%;
-  height: 7pc;
+  height: auto;
 }
-#con6 .card img {
-  width: 8pc;
-  height: 6pc;
+.card img {
+  width: 30%;
+  height: auto;
   margin-top: 0px;
 }
 
-#con6 .card .details {
+.card .details {
   margin-left: 10px;
   margin-top: 15px;
 }
-#con6 .card .details i {
+.card .details i {
   color: gold;
 }
