@@ -27,6 +27,7 @@ import { ApistestComponent } from './apistest/apistest.component';
 import { GellaryComponent } from './gellary/gellary.component';
 import { NewstoreComponent } from './newstore/newstore.component';
 import { Home1Component } from './home1/home1.component';
+import { OrderproductComponent } from './orderproduct/orderproduct.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { Home1Component } from './home1/home1.component';
     GellaryComponent,
     NewstoreComponent,
     Home1Component,
+    OrderproductComponent,
   ],
   imports: [
     BrowserModule,

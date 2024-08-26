@@ -8,9 +8,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-products.component.css'],
 })
 export class UserProductsComponent implements OnInit {
-  shopnow(productid: any) {
-    this.roter.navigate(['/get', productid]);
-  }
   products: any;
 
   constructor(private service: AdminService, private roter: Router) {}

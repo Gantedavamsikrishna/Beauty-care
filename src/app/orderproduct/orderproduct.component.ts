@@ -1,28 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AdminService } from '../admin.service';
-import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { QuantityService } from '../quantity.service';
 
 @Component({
-  selector: 'app-apistest',
-  templateUrl: './apistest.component.html',
-  styleUrls: ['./apistest.component.css'],
+  selector: 'app-orderproduct',
+  templateUrl: './orderproduct.component.html',
+  styleUrls: ['./orderproduct.component.css'],
 })
-export class ApistestComponent implements OnInit {
+export class OrderproductComponent {
   product: any;
-  quantity: number = 2;
+  quantity!: number;
   isdesc: boolean = true;
   isreview: boolean = true;
-
+  productId!: string;
   orderform: any;
+  isform: boolean = false;
+  showSuccess: boolean = true;
   constructor(
+    private qutservice: QuantityService,
     private service: AdminService,
     private fb: FormBuilder,
     private route: ActivatedRoute
   ) {
     this.orderform = this.fb.group({
       orderid: ['', Validators.required],
-      productId: ['', Validators.required],
       fullname: ['', Validators.required],
       pincode: [
         '',
@@ -34,22 +37,35 @@ export class ApistestComponent implements OnInit {
       ],
       phnumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
       address: ['', Validators.required],
-      quantity: ['', Validators.required],
     });
   }
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
-      const productId = params['id'];
-      this.getproductbyid(productId);
+      this.productId = params['id'];
+      this.getproductbyid(this.productId);
+    });
+    this.qutservice.currentQuantity.subscribe((quantity) => {
+      this.quantity = quantity;
     });
   }
 
   onSubmit() {
     if (this.orderform.valid) {
-      this.service.createorder(this.orderform.value).subscribe(
+      const orderData = {
+        ...this.orderform.value,
+        productId: this.productId,
+        quantity: this.quantity,
+      };
+
+      this.service.createorder(orderData).subscribe(
         (res) => {
+          this.showSuccess = true;
+          this.isform = false;
           console.log(res, 'successfully ordered');
+          setTimeout(() => {
+            this.showSuccess = false;
+          }, 3000);
         },
         (error) => {
           console.error('order failed', error);

@@ -11,7 +11,7 @@ import { UserProductsComponent } from './user-products/user-products.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
-import { ApistestComponent } from './apistest/apistest.component';
+import { OrderproductComponent } from './orderproduct/orderproduct.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -19,8 +19,9 @@ const routes: Routes = [
   { path: 'products', component: UserProductsComponent },
   { path: 'product-details', component: ProductdetailsComponent },
   { path: 'user/login', component: LoginComponent },
-  { path: 'testingapi', component: ApistestComponent },
+  { path: 'order', component: OrderproductComponent },
   { path: 'get/:id', component: ProductdetailsComponent },
+  { path: 'order/id/:id', component: OrderproductComponent },
   {
     path: 'dashboard',
     component: DashboardComponent,

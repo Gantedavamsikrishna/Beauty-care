@@ -3,4 +3,5 @@
 body {
   font-family: "lato", sans-serif;
   background: #fcf7ee;
+  overflow-x: hidden;
 }

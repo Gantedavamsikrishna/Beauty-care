@@ -1,37 +1,33 @@
-#con6 {
-  margin-top: 10pc;
-  margin-bottom: 5pc;
-}
-
-.box {
-  margin-top: 2pc;
-  padding: 2pc;
-  background: #f4ecda;
-  width: 100%;
-  height: auto;
-}
-
-.card {
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  background: #faf7f2;
-  border: none;
+input {
   border-radius: 0;
-  margin-top: 22px;
-  width: 100%;
-  height: auto;
+  background: transparent;
+  padding: 0.5pc;
+  border: solid 1px;
 }
-.card img {
-  width: 30%;
-  height: auto;
-  margin-top: 0px;
+ul {
+  display: flex;
+  list-style-type: none;
 }
-
-.card .details {
-  margin-left: 10px;
-  margin-top: 15px;
+li {
+  margin-right: 3pc;
+  font-size: 1.8em;
+  font-weight: 600;
+  cursor: pointer;
 }
-.card .details i {
+.profile h4 {
+  margin-left: 25px;
+  margin-top: 14px;
+}
+.profile h4 span {
+  color: rgb(241, 108, 131);
+}
+.reviewtext i {
   color: gold;
+}
+img {
+  width: 100px;
+  height: auto;
+}
+hr {
+  border: 1px solid;
 }

@@ -1,72 +1,77 @@
 <app-navbar></app-navbar>
 <div class="container-fluid" id="con1">
   <div class="container-fluid">
-    <h2 class="">shop now</h2>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <img src="../assets/BB-Logo.png" alt="" />
+      </div>
+      <div class="col-md-6 d-none d-md-block"></div>
+    </div>
   </div>
 </div>
 
 <div class="container" id="con">
   <div class="row">
-    <div class="col">
+    <div class="col-12 col-md-6">
       <div class="product-img">
         <img [src]="product.imageUrl" alt="Product Image" />
       </div>
     </div>
-    <div class="col">
+    <div class="col-12 col-md-6">
       <div class="details">
         <h1>{{ product.pname }}</h1>
-        <div class="price">{{ product.price }}/-</div>
-        <div class="rating"><p>****lkjhgfx</p></div>
+        <div class="price">{{ product.price }}/- <span>only</span></div>
+        <div class="rating">
+          <p>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+          </p>
+        </div>
         <p>
           {{ product.details }}
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni
-          eum amet, id cum omnis ab laboriosam accusantium tempora quibusdam,
-          adipisci sapiente sit cupiditate maxime tempore eaque est repellendus
-          eveniet.
         </p>
-        <div class="quantity">3</div>
-        <button>add to cart</button>
-        <button>shop now <i class="bi bi-arrow-up-right"></i></button>
+        <div class="quantity-control">
+          <label for="quantity">Quantity:</label>
+          <button class="btn" (click)="decrement()">
+            <i class="bi bi-dash"></i>
+          </button>
+          <b>{{ quantity }}</b>
+          <button class="btn" (click)="increment()">
+            <i class="bi bi-plus"></i>
+          </button>
+        </div>
+        <div class="row">
+          <div class="col-6 col-md-6">
+            <button (click)="addToBag(product)">add to cart</button>
+          </div>
+          <div class="col-6 col-md-6">
+            <button (click)="shopnow(product.productid)">
+              shop now <i class="bi bi-arrow-up-right"></i>
+            </button>
+          </div>
+        </div>
+
         <hr />
-        SKU: Graters-1-8 <br />
-        Categories: Compact Powder, Facial Kit <br />
-        Tag: Moisturizer
+        <tr>
+          <td class="header">SKU</td>
+          <td>:Graters-1-8</td>
+        </tr>
+        <tr>
+          <td class="header">Tag</td>
+          <td>:Moisturizer</td>
+        </tr>
+        <tr>
+          <td class="header">Categories</td>
+          <td>:Compact Powder, Facial Kit</td>
+        </tr>
       </div>
     </div>
   </div>
 </div>
 
-<!-- <div class="product-container" id="con3">
-  <div class="row">
-    <div class="col">
-      <div class="product-image">
-        <img [src]="product.imageUrl" alt="Product Image" />
-      </div>
-    </div>
-    <div class="col">
-      <div class="product-details">
-        <h2 class="product-name">{{ product.pname }}</h2>
-        <p class="product-price">{{ product.price }}/-</p>
-        <p class="product-original-price">{{ product.originalPrice }}/-</p>
-        <p class="product-discount">{{ product.discount }}% off</p>
-        <p class="product-description">{{ product.details }}</p>
-        <div class="quantity">
-          <label for="quantity">Quantity:</label>
-          <input
-            type="number"
-            id="quantity"
-            name="quantity"
-            [(ngModel)]="quantity"
-            min="1"
-          />
-        </div>
-        <div class="product-actions">
-          <button class="add-to-bag" (click)="addToBag()">Add to Bag</button>
-          <button class="shop-now" (click)="shopNow()">Shop Now</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 <app-cards></app-cards>
 <app-footer></app-footer>

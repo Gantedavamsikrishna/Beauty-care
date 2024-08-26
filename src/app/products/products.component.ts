@@ -23,8 +23,8 @@ export class ProductsComponent implements OnInit {
     private fb: FormBuilder
   ) {
     this.productform = this.fb.group({
-      id: ['', Validators.required],
-      productName: ['', Validators.required],
+      productid: ['', Validators.required],
+      pname: ['', Validators.required],
       price: ['', Validators.required],
       catageroy: ['', Validators.required],
       details: ['', Validators.required],
@@ -36,13 +36,6 @@ export class ProductsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.productform = this.fb.group({
-      productid: ['', Validators.required],
-      pname: ['', Validators.required],
-      price: ['', Validators.required],
-      catageroy: ['', Validators.required],
-      details: ['', Validators.required],
-    });
     this.getallprdata(this.products);
   }
   onsubmit() {

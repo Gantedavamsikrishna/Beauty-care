@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class AdminService {
   private adminurl = 'https://adminlogin-latest.onrender.com/admin';
-  private producturl = 'https://products-api-44eo.onrender.com/product';
-  private orderurl = 'https://reqres.in/api';
+  private producturl = 'http://localhost:2027/product';
+  private orderurl = 'http://localhost:2028/order';
 
   constructor(private http: HttpClient) {}
 
@@ -22,7 +22,7 @@ export class AdminService {
     return this.http.get(`${this.producturl}/data`, { headers });
   }
   getallordedata(users: any): Observable<any> {
-    return this.http.get(`${this.orderurl}/users`);
+    return this.http.get(`${this.orderurl}/data`);
   }
   getallorders(data: any): Observable<any> {
     return this.http.get(`${this.producturl}/data`);
@@ -40,7 +40,7 @@ export class AdminService {
     return `${this.producturl}/image/${id}`;
   }
   createorder(add: any): Observable<any> {
-    return this.http.post(`${this.producturl}/save`, add);
+    return this.http.post(`${this.orderurl}/save`, add);
   }
   updatedata(id: any): Observable<any> {
     return this.http.put(`${this.adminurl}/update/${id}`, id);

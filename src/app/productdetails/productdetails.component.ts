@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../admin.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { QuantityService } from '../quantity.service';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-productdetails',
@@ -9,16 +11,25 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductdetailsComponent implements OnInit {
   readdata: any;
-  shopNow() {
-    throw new Error('Method not implemented.');
+  shopnow(productid: any) {
+    this.router.navigate(['order/id', productid]);
   }
-  addToBag() {
-    throw new Error('Method not implemented.');
+  addToBag(product: any) {
+    this.cartservice.addcart(product);
+    console.log('product added cart', product);
   }
   product: any;
-  quantity: number = 1;
+  quantity!: number;
 
-  constructor(private service: AdminService, private route: ActivatedRoute) {}
+  constructor(
+    private cartservice: CartService,
+    private qtservice: QuantityService,
+    private service: AdminService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {
+    this.quantity = this.qtservice.getQuantity();
+  }
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       const productId = params['id'];
@@ -30,15 +41,23 @@ export class ProductdetailsComponent implements OnInit {
       (res) => {
         console.log(res, 'data');
         this.product = res;
-
         this.product.imageUrl = this.service.getImageUrl(
           this.product.productid
         );
       },
-
       (err) => {
         console.log(err);
       }
     );
+  }
+  increment() {
+    this.quantity++;
+    this.qtservice.updateQuantity(this.quantity);
+  }
+  decrement() {
+    if (this.quantity > 1) {
+      this.quantity--;
+      this.qtservice.updateQuantity(this.quantity);
+    }
   }
 }
