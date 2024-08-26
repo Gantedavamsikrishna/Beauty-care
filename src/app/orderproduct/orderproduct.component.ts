@@ -16,8 +16,8 @@ export class OrderproductComponent {
   isreview: boolean = true;
   productId!: string;
   orderform: any;
-  isform: boolean = false;
-  showSuccess: boolean = true;
+  isform: boolean = true;
+  showSuccess: boolean = false;
   constructor(
     private qutservice: QuantityService,
     private service: AdminService,
