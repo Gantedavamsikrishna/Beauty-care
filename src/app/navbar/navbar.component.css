@@ -2,7 +2,6 @@ nav {
   background-color: #fff;
   transition: background-color 0.3s ease-in;
   box-shadow: 0 0 25px rgb(0 0 0 / 50%);
-  height: 4pc;
 }
 #navbarNav {
   margin-left: 15pc;
@@ -12,20 +11,17 @@ li a {
   font-size: 20px;
 }
 
-li i {
+i {
+  font-size: 30px;
   cursor: pointer;
-  font-size: 25px;
-  margin: 1pc;
 }
-li i:hover {
+i:hover {
   color: red;
 }
 li a:hover {
   color: red;
 }
-img {
-  width: 30px;
-}
+
 span {
   color: rgb(224, 87, 110);
 }
@@ -34,7 +30,8 @@ span {
 }
 
 .navbar-brand h3 {
-  font-size: 1.5rem;
+  margin-left: 2pc;
+  font-size: 1.6rem;
 }
 
 .navbar-brand span {

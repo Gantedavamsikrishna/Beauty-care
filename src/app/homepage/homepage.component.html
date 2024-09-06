@@ -1,5 +1,53 @@
-<app-home1></app-home1>
-<app-about></app-about>
+<app-navbar></app-navbar>
+<div class="home-section" id="home">
+  <div class="container-fluid" id="con1">
+    <div class="row">
+      <div class="col-1 d-none d-md-block"></div>
+      <div #content class="col-12 col-md-7 content">
+        <div class="text">
+          <h5>FASTEST GROWING</h5>
+          <h3>
+            Luxurious & Premium <br />
+            Products
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
+            velit
+            <br />
+            a atque unde aperiam, praesentium, veritatis voluptaa?
+          </p>
+          <button class="cssbuttons-io">
+            <span> Browse Collections</span>
+          </button>
+        </div>
+      </div>
+      <div #content class="col-12 col-md-4 content"></div>
+    </div>
+  </div>
+</div>
+<div #content class="container-fluid content" id="con11">
+  <div class="marquee">
+    <div class="marquee-content">
+      <img src="../assets/brand-logo-2.webp" alt="Logo 2" />
+      <img src="../assets/brand-logo-3.webp" alt="Logo 3" />
+      <img src="../assets/brand-logo-5.webp" alt="Logo 5" />
+      <img src="../assets/Logo-1.webp" alt="Logo 1" />
+      <img src="../assets/Logo-5.webp" alt="Logo 5" />
+      <img src="../assets/Logo-2.webp" alt="Logo 2" />
+      <img src="../assets/Logo-4.webp" alt="Logo 4" />
+      <img src="../assets/brand-logo-2.webp" alt="Logo 2" />
+      <img src="../assets/brand-logo-3.webp" alt="Logo 3" />
+      <img src="../assets/brand-logo-5.webp" alt="Logo 5" />
+      <img src="../assets/Logo-1.webp" alt="Logo 1" />
+      <img src="../assets/Logo-5.webp" alt="Logo 5" />
+      <img src="../assets/Logo-2.webp" alt="Logo 2" />
+      <img src="../assets/Logo-4.webp" alt="Logo 4" />
+    </div>
+  </div>
+</div>
+<div class="about-section" id="about">
+  <app-about></app-about>
+</div>
 <div class="container-fluid" id="con3" routerLink="/products">
   <div #content class="header text-center content my-5">
     <h4>Best Products</h4>
@@ -13,7 +61,6 @@
         <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i>
         <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i>
         <i class="bi bi-star"></i>
-
         <div class="price">570/-</div>
       </div>
     </div>
@@ -21,10 +68,11 @@
       <img src="../assets/card-3.webp " alt="" />
       <div class="details text-center">
         <h4>3 in 1 facila kit</h4>
-        <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
         <i class="bi bi-star"></i>
-
         <div class="price">570/-</div>
       </div>
     </div>
@@ -35,7 +83,6 @@
         <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i>
         <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i>
         <i class="bi bi-star"></i>
-
         <div class="price">570/-</div>
       </div>
     </div>
@@ -52,259 +99,11 @@
     </div>
   </div>
 </div>
-
-<div class="container-fluid" id="con4">
-  <div class="row">
-    <div #content class="col-12 col-md-4 content">
-      <div class="box1">
-        <div class="names">
-          <p>GAMBARO</p>
-          <h4>Face Care</h4>
-          <button class="btn">view Collections</button>
-        </div>
-      </div>
-      <div class="box2">
-        <div class="names2">
-          <p>GAMBARO</p>
-          <h4>Face Care</h4>
-          <button class="btn">view Collections</button>
-        </div>
-      </div>
-    </div>
-
-    <div #content class="col-12 col-md-4 content">
-      <div class="box3">
-        <div class="name3">
-          <p>GAMBARO</p>
-          <h4>Face Care</h4>
-          <button class="btn">view Collections</button>
-        </div>
-      </div>
-    </div>
-
-    <div #content class="col-12 col-md-4 content">
-      <div class="box4">
-        <div class="names2">
-          <p>GAMBARO</p>
-          <h4>Face Care</h4>
-          <button class="btn">view Collections</button>
-        </div>
-      </div>
-      <div class="box5">
-        <div class="names">
-          <p>GAMBARO</p>
-          <h4>Face Care</h4>
-          <button class="btn">view Collections</button>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="store-section content" #content id="gellary">
+  <app-gellary></app-gellary>
+  <app-newstore></app-newstore>
 </div>
-
-<app-gellary></app-gellary>
-<app-newstore></app-newstore>
-<div class="container-fluid" id="con81">
-  <div class="container-fluid" id="con8">
-    <div #content class="header text-center content">
-      <h6>BEST IN MARKET</h6>
-      <h2>Healthiest Cosmetics</h2>
-    </div>
-    <div class="row">
-      <div class="col-6 col-md-6 text-center">
-        <div class="products">4300k</div>
-        <div class="name">Products Sold</div>
-      </div>
-      <div class="col-6 col-md-6 text-center">
-        <div class="products">99.99 %</div>
-        <div class="name">Satisfaction Guranteed</div>
-      </div>
-      <div class="col-6 col-md-6 text-center">
-        <div class="products">42 K</div>
-        <div class="name">Customers Satisfied</div>
-      </div>
-      <div class="col-6 col-md-6 text-center">
-        <div class="products">0.01 %</div>
-        <div class="name">Defective Returns</div>
-      </div>
-    </div>
-    <p class="text-center my-5">
-      Fusce id aliquet justo. Etiam aliquet elit eleifend quam commodo sagittis.
-      Quisque dapibus nulla in <br />
-      blandit dictum. Quisque dapibus nulla in blandit dictum.
-    </p>
-  </div>
+<div class="store-sectioncontent" #content id="blog">
+  <app-blog></app-blog>
+  <app-footer></app-footer>
 </div>
-
-<div class="container" id="con7">
-  <div #content class="head text-center content">
-    <span>TESTIMONIALS</span>
-    <h3>What Our Clients Say</h3>
-  </div>
-  <div class="container-fluid" id="car">
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li
-          data-bs-target="#myCarousel"
-          data-bs-slide-to="0"
-          class="active"
-        ></li>
-        <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
-        <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
-        <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
-      </ol>
-
-      <!-- Wrapper for slides -->
-
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="box">
-            <p class="text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-              ratione quisquam culpa, totam ut consectetur, <br />
-              consequuntur a praesentium quod enim adipisci laudantium molestias
-              omnis aliquam animi<br />
-              odio rerum modi exercitationem.
-            </p>
-            <hr />
-            <div class="details">
-              <div class="card">
-                <img src="../assets/testmonials.webp" alt="" />
-                <div class="name">
-                  Barbara palvin
-                  <p>Best Model</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="box">
-            <p class="text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-              ratione quisquam culpa, totam ut consectetur, <br />
-              consequuntur a praesentium quod enim adipisci laudantium molestias
-              omnis aliquam animi<br />
-              odio rerum modi exercitationem.
-            </p>
-            <hr />
-            <div class="details">
-              <div class="card">
-                <img src="../assets/testmonials.webp" alt="" />
-                <div class="name">
-                  Barbara palvin
-                  <p>Best Model</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="box">
-            <p class="text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-              ratione quisquam culpa, totam ut consectetur, <br />
-              consequuntur a praesentium quod enim adipisci laudantium molestias
-              omnis aliquam animi<br />
-              odio rerum modi exercitationem.
-            </p>
-            <hr />
-            <div class="details">
-              <div class="card">
-                <img src="../assets/testmonials.webp" alt="" />
-                <div class="name">
-                  Barbara palvin
-                  <p>Best Model</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="box">
-            <p class="text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-              ratione quisquam culpa, totam ut consectetur, <br />
-              consequuntur a praesentium quod enim adipisci laudantium molestias
-              omnis aliquam animi<br />
-              odio rerum modi exercitationem.
-            </p>
-            <hr />
-            <div class="details">
-              <div class="card">
-                <img src="../assets/testmonials.webp" alt="" />
-                <div class="name">
-                  Barbara palvin
-                  <p>Best Model</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container-fluid" id="con9">
-  <div #content class="head text-center content">
-    <span> LATEST </span>
-    <h3>News & Blogs</h3>
-  </div>
-  <div class="row">
-    <div #content class="col-md-4 col-12 content">
-      <div class="box">
-        <img src="../assets/blog-1.webp" alt="" />
-        <h3>Premium feather-light, comfortable lipstick</h3>
-        <p>
-          Distinctively reconceptualize resource maximizing methodologies for
-          enterprise strategic theme areas. Energistically revolutionize high...
-        </p>
-        <a href="">Read More</a>
-      </div>
-    </div>
-    <div #content class="col-md-4 col-12 content">
-      <div class="box">
-        <img src="../assets/blog-2.webp" alt="" />
-        <h3>Long-lasting & quick dry nail polish set</h3>
-        <p>
-          Distinctively reconceptualize resource maximizing methodologies for
-          enterprise strategic theme areas. Energistically revolutionize high...
-        </p>
-        <a href="">Read More</a>
-      </div>
-    </div>
-    <div #content class="col-md-4 col-12 content">
-      <div class="box">
-        <img src="../assets/blog-3.webp" alt="" />
-        <h3>Wrinkles & acne free best night serum</h3>
-        <p>
-          Distinctively reconceptualize resource maximizing methodologies for
-          enterprise strategic theme areas. Energistically revolutionize high...
-        </p>
-        <a href="">Read More</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<app-footer></app-footer>

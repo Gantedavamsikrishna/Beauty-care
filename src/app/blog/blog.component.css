@@ -1,0 +1,108 @@
+#con7 .details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+hr {
+  position: relative;
+  top: 5.5pc;
+  border: 1px solid;
+}
+#con7 .card {
+  background: url("/assets/brush.webp");
+  background-position: center;
+  background-size: cover;
+  border: none;
+  width: 20pc;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#con7 .card img {
+  border-radius: 8pc;
+  width: 8pc;
+  height: 8pc;
+}
+
+#con7 .head h3 {
+  font-size: 3em;
+}
+#con81 {
+  background-color: #e5d7bc;
+}
+#con8 {
+  margin-top: 5pc;
+  background: url("/assets/flowe bg.png");
+  background-size: cover;
+  height: auto;
+  padding-top: 5px;
+}
+
+#con8 .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#con8 .header h6 {
+  margin-top: 3pc;
+  font-size: 20px;
+}
+#con8 .header h2 {
+  font-size: 3em;
+}
+
+#con8 .products {
+  font-size: 3em;
+  font-weight: 500;
+}
+
+#con8 .name {
+  font-size: 1em;
+}
+
+#con9 {
+  margin-top: 4pc;
+}
+
+#con9 .box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+#con9 .box img {
+  width: 100%;
+  height: auto;
+}
+
+#con9 .box a {
+  width: 50%;
+
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+@media (max-width: 768px) {
+  #con8 .header h6 {
+    margin-top: 1pc;
+    font-size: 0.9em;
+  }
+
+  #con8 .header h2 {
+    font-size: 1.2em;
+  }
+
+  #con8 .products {
+    font-size: 1.5em;
+  }
+
+  #con8 .name {
+    font-size: 0.8em;
+  }
+}

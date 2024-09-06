@@ -8,14 +8,10 @@ import { OrdersComponent } from './orders/orders.component';
 import { AdminRegComponent } from './admin-reg/admin-reg.component';
 import { AdminListComponent } from './admin-list/admin-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AddproductComponent } from './addproduct/addproduct.component';
-
 import { AdminService } from './admin.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
 import { UserComponent } from './user/user.component';
 import { NavbarComponent } from './navbar/navbar.component';
-
 import { UserProductsComponent } from './user-products/user-products.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -28,6 +24,9 @@ import { GellaryComponent } from './gellary/gellary.component';
 import { NewstoreComponent } from './newstore/newstore.component';
 import { Home1Component } from './home1/home1.component';
 import { OrderproductComponent } from './orderproduct/orderproduct.component';
+import { BlogComponent } from './blog/blog.component';
+
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +35,7 @@ import { OrderproductComponent } from './orderproduct/orderproduct.component';
     OrdersComponent,
     AdminRegComponent,
     AdminListComponent,
-    AddproductComponent,
+    ProductsComponent,
     DashboardComponent,
     UserComponent,
     NavbarComponent,
@@ -52,6 +51,8 @@ import { OrderproductComponent } from './orderproduct/orderproduct.component';
     NewstoreComponent,
     Home1Component,
     OrderproductComponent,
+    BlogComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,8 +2,8 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
-  OnInit,
   QueryList,
+  ViewChild,
   ViewChildren,
 } from '@angular/core';
 
@@ -16,7 +16,14 @@ export class HomepageComponent implements AfterViewInit {
   @ViewChildren('content') contentElements!: QueryList<ElementRef>;
 
   observer!: IntersectionObserver;
+  @ViewChild('navbarNav', { static: false })
+  navbarNav!: ElementRef;
 
+  closeNav() {
+    if (this.navbarNav.nativeElement.classList.contains('show')) {
+      this.navbarNav.nativeElement.classList.remove('show');
+    }
+  }
   ngAfterViewInit(): void {
     this.observer = new IntersectionObserver(
       (entries) => {

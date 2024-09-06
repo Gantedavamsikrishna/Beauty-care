@@ -8,6 +8,132 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+#con1 {
+  overflow: hidden;
+  background: url("/assets/homebg-1.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
+}
+
+.cssbuttons-io {
+  position: relative;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+
+  border-radius: 0;
+  cursor: pointer;
+  border: none;
+  background: #111;
+  color: ghostwhite;
+  overflow: hidden;
+}
+
+.cssbuttons-io span {
+  position: relative;
+  z-index: 10;
+
+  transition: color 0.4s;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.cssbuttons-io::before,
+.cssbuttons-io::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.cssbuttons-io::before {
+  content: "";
+  background: rgb(185, 185, 184);
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.cssbuttons-io:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+.cssbuttons-io:active {
+  transform: scale(0.95);
+}
+#con1 .row {
+  margin-top: 6pc;
+}
+#con1 .col-5 img {
+  width: 38pc;
+  height: auto;
+}
+#con1 .text h5 {
+  font-size: 25px;
+  margin-top: 8pc;
+  font-weight: 200;
+}
+#con1 .text h3 {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-top: 2pc;
+}
+#con1 .text p {
+  font-style: italic;
+  font-weight: 200;
+  font-size: 18px;
+  margin-top: 1pc;
+}
+
+.content {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#con11 {
+  margin-top: 3pc;
+}
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+}
+
+.marquee-content img {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 768px) {
+}
+
 #con3 {
   margin-top: -20pc;
   margin-bottom: 5pc;
@@ -26,168 +152,34 @@
   font-size: 20px;
   color: gold;
 }
-#con4 .box1 {
-  background: url("/assets/box-1.webp");
-  background-size: cover;
-  margin-bottom: 15px;
-  border: 1px solid;
-  width: 100%;
-  height: 18pc;
-}
-#con4 .box2 {
-  background: url("/assets/box-2.webp") center center;
-  background-size: cover;
-  margin-bottom: 15px;
-  border: 1px solid;
-  width: 100%;
-  height: 18pc;
-}
-#con4 .box4 {
-  background: url("/assets/box-4.webp");
-  background-size: cover;
-  margin-bottom: 15px;
-  border: 1px solid;
-  width: 100%;
-  height: 18pc;
-}
-#con4 .box5 {
-  background: url("/assets/box-5.webp");
-  background-size: cover;
-  margin-bottom: 15px;
-  border: 1px solid;
-  width: 100%;
-  height: 18pc;
-}
-#con4 .box3 {
-  background: url("/assets/box-3.webp");
-  background-size: cover;
-  margin-bottom: 15px;
-  width: 100%;
-  height: 37pc;
-  border: 1px solid;
-}
-#con4 .names {
-  margin-top: 4pc;
-  margin-left: 5pc;
-}
-#con4 .names2 {
-  margin-top: 4pc;
-  margin-left: 15pc;
-}
-#con4 .name3 {
-  margin-top: 15pc;
-  margin-left: 5pc;
-}
-#con4 p {
-  font-size: 1em;
-  font-weight: 200;
-  margin: 0;
-}
 
-#con4 h4 {
-  font-size: 2em;
-}
-#con4 .btn {
-  padding: 0;
-  border-radius: 0;
-  border-bottom: 2px solid;
-}
-#con4 {
-  margin-top: 10pc;
-  margin-bottom: 0pc;
-}
-
-#con7 .details {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-hr {
-  position: relative;
-  top: 5.5pc;
-  border: 1px solid;
-}
-#con7 .card {
-  background: url("/assets/brush.webp");
-  background-position: center;
-  background-size: cover;
-  border: none;
-  width: 20pc;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-#con7 .card img {
-  border-radius: 8pc;
-  width: 8pc;
-  height: 8pc;
-}
-
-#con7 .head h3 {
-  font-size: 3em;
-}
-#con81 {
-  background-color: #e5d7bc;
-}
-#con8 {
-  margin-top: 5pc;
-  background: url("/assets/flowe bg.png");
-  background-size: cover;
-  height: auto;
-  padding-top: 5px;
-}
-
-#con8 .col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#con8 .header h6 {
-  margin-top: 3pc;
-  font-size: 20px;
-}
-#con8 .header h2 {
-  font-size: 3em;
-}
-
-#con8 .products {
-  font-size: 3em;
-  font-weight: 500;
-}
-
-#con8 .name {
-  font-size: 1em;
-}
-
-#con9 {
-  margin-top: 4pc;
-}
-
-#con9 .box {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-}
-#con9 .box img {
-  width: 100%;
-  height: auto;
-}
-
-#con9 .box a {
-  width: 50%;
-
-  text-decoration: none;
-  color: black;
-  padding: 5px;
-}
 @media (max-width: 768px) {
+  #con1 {
+    background: url("/assets/homebg-1.jpg");
+    background-size: cover;
+    height: auto;
+    padding: 20px;
+  }
+  #con1 .row {
+    margin-top: 0pc;
+  }
+
+  #con1 .animated-btn {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  #con1 .text h3 {
+    font-size: 1.5rem;
+  }
+
+  #con1 .text p {
+    font-size: 0.9rem;
+  }
+  .col-6 img {
+    width: 100%;
+    height: 50%;
+  }
   #con1 {
     background: url("/assets/homebg-1.jpg");
     background-size: cover;
@@ -233,9 +225,6 @@ hr {
 
   #con8 .products {
     font-size: 1.5em;
-  }
-  #con4 {
-    margin-bottom: 0;
   }
 
   #con8 .name {

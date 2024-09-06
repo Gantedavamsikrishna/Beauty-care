@@ -38,6 +38,10 @@ img {
   width: 100px;
   height: auto;
 }
+span {
+  color: rgb(240, 52, 83);
+  font-weight: 600;
+}
 hr {
   border: 1px solid;
 }
@@ -47,10 +51,7 @@ hr {
   flex-direction: column;
   justify-content: center;
 }
-img {
-  width: 20pc;
-  height: auto;
-}
+
 .success-box {
   display: flex;
   flex-direction: column;

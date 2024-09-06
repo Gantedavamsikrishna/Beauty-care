@@ -12,10 +12,12 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
 import { OrderproductComponent } from './orderproduct/orderproduct.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomepageComponent },
+  { path: 'about', component: AboutComponent },
   { path: 'products', component: UserProductsComponent },
   { path: 'product-details', component: ProductdetailsComponent },
   { path: 'user/login', component: LoginComponent },

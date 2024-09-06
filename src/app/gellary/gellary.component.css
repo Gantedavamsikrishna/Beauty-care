@@ -1,3 +1,77 @@
+#con4 .box1 {
+  background: url("/assets/box-1.webp");
+  background-size: cover;
+  margin-bottom: 15px;
+  border: 1px solid;
+  width: 100%;
+  height: 18pc;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1pc;
+}
+#con4 .box2 {
+  background: url("/assets/box-2.webp") center center;
+  background-size: cover;
+  margin-bottom: 15px;
+  border: 1px solid;
+  width: 100%;
+  height: 18pc;
+}
+#con4 .box4 {
+  background: url("/assets/box-4.webp");
+  background-size: cover;
+  margin-bottom: 15px;
+  border: 1px solid;
+  width: 100%;
+  height: 18pc;
+}
+#con4 .box5 {
+  background: url("/assets/box-5.webp");
+  background-size: cover;
+  margin-bottom: 15px;
+  border: 1px solid;
+  width: 100%;
+  height: 18pc;
+}
+#con4 .box3 {
+  background: url("/assets/box-3.webp");
+  background-size: cover;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 37pc;
+  border: 1px solid;
+}
+#con4 .names {
+  margin-top: 4pc;
+  margin-left: 5pc;
+}
+#con4 .names2 {
+  margin-top: 4pc;
+  margin-left: 15pc;
+}
+#con4 .name3 {
+  margin-top: 15pc;
+  margin-left: 5pc;
+}
+#con4 p {
+  font-size: 1em;
+  font-weight: 200;
+  margin: 0;
+}
+
+#con4 h4 {
+  font-size: 2em;
+}
+#con4 .btn {
+  padding: 0;
+  border-radius: 0;
+  border-bottom: 2px solid;
+}
+#con4 {
+  margin-top: 10pc;
+  margin-bottom: 0pc;
+}
 #con5 .box {
   background: url("/assets/right.jpg") no-repeat center center/cover;
   width: 100%;
@@ -48,6 +122,10 @@
   margin-top: 10pc;
 }
 @media (max-width: 768px) {
+  #con4 {
+    margin-bottom: 0;
+  }
+
   #con5 .box img {
     width: 60%;
     height: auto;
