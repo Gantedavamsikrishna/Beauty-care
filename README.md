@@ -63,7 +63,7 @@ This project is designed to be scalable, modular, and easy to extend for real-wo
 | **Frontend (Angular)** | 🟢 Active  | [https://beauty-care-psi.vercel.app/home](https://beauty-care-psi.vercel.app/home) |                                          |
 | **Order Service**      | 🟢 Active  | [https://orderserviceapi.onrender.com](https://orderserviceapi.onrender.com)       |                                          |
 | **Product Service**    | 🟢 Active  | [https://products-api-44eo.onrender.com](https://products-api-44eo.onrender.com)   |                                          |
-| **Admin Service**      | 🟢 Pending | [https://adminlogin-latest.onrender.com]                                           | (https://adminlogin-latest.onrender.com) |
+| **Admin Service**      | 🟢 Pending | [https://adminlogin-latest.onrender.com] (https://adminlogin-latest.onrender.com)  |                                          |
 
 ---
 
